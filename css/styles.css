@@ -30,8 +30,8 @@
   --border-light: #E2E9E5;
 
   /* Type */
-  --font-display: "Bebas Neue", "Oswald", sans-serif;
-  --font-body: "Source Sans 3", "Segoe UI", sans-serif;
+  --font-display: "Barlow Condensed", "Oswald", sans-serif;
+  --font-body: "Barlow", "Segoe UI", sans-serif;
 
   /* Spacing scale */
   --space-1: 0.25rem;
@@ -97,8 +97,9 @@ body {
 
 h1, h2, h3 {
   font-family: var(--font-display);
-  letter-spacing: 0.01em;
-  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: 0.005em;
+  line-height: 1.08;
   text-transform: uppercase;
 }
 
