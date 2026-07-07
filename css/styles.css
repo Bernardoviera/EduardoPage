@@ -783,11 +783,17 @@ input:focus-visible {
   .authority-card { grid-template-columns: 260px 1fr; padding: var(--space-6); }
 }
 .authority-photo {
-  aspect-ratio: 1;
+  aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
+  overflow: hidden;
   background: linear-gradient(160deg, #1C2E26, #0B1512);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--text-muted-on-dark);
+}
+.authority-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 .authority-eyebrow {
   color: var(--primary);
