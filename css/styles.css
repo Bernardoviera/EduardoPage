@@ -686,9 +686,29 @@ input:focus-visible {
   border-radius: var(--radius-lg);
   overflow: hidden;
   position: relative;
-  aspect-ratio: 3/4;
+  aspect-ratio: 9 / 16;
   background: linear-gradient(160deg, #16261F, #0B1512);
   box-shadow: var(--shadow-md);
+}
+.testimonial-facade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+}
+.testimonial-thumb {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .testimonial-card__overlay {
   position: absolute;
@@ -697,36 +717,34 @@ input:focus-visible {
   flex-direction: column;
   justify-content: space-between;
   padding: var(--space-4);
+  background: linear-gradient(180deg, rgba(11,21,18,0.15) 0%, rgba(11,21,18,0) 35%, rgba(11,21,18,0.75) 100%);
+  transition: background 200ms var(--ease);
 }
-.testimonial-card .play-btn { width: 60px; height: 60px; margin-inline: auto; align-self: center; margin-block: auto; }
+.testimonial-facade:hover .testimonial-card__overlay {
+  background: linear-gradient(180deg, rgba(11,21,18,0.3) 0%, rgba(11,21,18,0.1) 35%, rgba(11,21,18,0.8) 100%);
+}
+.testimonial-card .play-btn {
+  width: 60px; height: 60px;
+  margin: auto;
+  transition: transform 200ms var(--ease);
+}
+.testimonial-facade:hover .play-btn { transform: scale(1.08); }
 .testimonial-card__meta {
   background: rgba(11,21,18,0.72);
   border-radius: var(--radius-sm);
   padding: var(--space-2) var(--space-3);
   color: #fff;
+  text-align: left;
 }
 .testimonial-card__meta strong { display: block; font-size: 0.95rem; }
 .testimonial-card__meta span { font-size: 0.8rem; color: var(--text-muted-on-dark); }
-
-/* Injected video/iframe player (fills the card once play is clicked) */
-.media-player {
+/* YouTube player injected on click */
+.testimonial-card iframe {
   position: absolute;
   inset: 0;
-  background: #000;
-}
-.media-player video {
   width: 100%;
   height: 100%;
   border: 0;
-  object-fit: contain;
-  display: block;
-  background: #000;
-}
-.media-player iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
 }
 
 /* ==========================================================================

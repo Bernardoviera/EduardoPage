@@ -25,55 +25,28 @@
     });
   }
 
-  // Click-to-play video players.
-  // A card opts in with either:
-  //   data-video="path/to/file.mp4"   -> self-hosted native <video>
-  //   data-embed="<youtube-id>"        -> YouTube iframe
-  // The existing overlay (play button + label) is replaced by the player.
-  function buildPlayer(card) {
-    var wrap = document.createElement("div");
-    wrap.className = "media-player";
-
-    if (card.dataset.video) {
-      var video = document.createElement("video");
-      video.src = card.dataset.video;
-      video.controls = true;
-      video.autoplay = true;
-      video.playsInline = true;
-      video.setAttribute("playsinline", "");
-      wrap.appendChild(video);
-      // Try to start playback; ignore promise rejection (autoplay policies).
-      var p = video.play();
-      if (p && typeof p.catch === "function") p.catch(function () {});
-    } else if (card.dataset.embed) {
+  // Testimonials: load the YouTube player only when the visitor clicks
+  // (keeps the page light — no embeds run until requested).
+  var facades = document.querySelectorAll(".testimonial-facade");
+  facades.forEach(function (facade) {
+    facade.addEventListener("click", function () {
+      var id = facade.getAttribute("data-yt");
+      if (!id) return;
       var iframe = document.createElement("iframe");
-      iframe.src =
-        "https://www.youtube-nocookie.com/embed/" +
-        encodeURIComponent(card.dataset.embed) +
-        "?autoplay=1&rel=0&modestbranding=1";
-      iframe.title = card.getAttribute("aria-label") || "Vídeo";
-      iframe.allow =
-        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
-      iframe.setAttribute("allowfullscreen", "");
-      iframe.loading = "lazy";
-      wrap.appendChild(iframe);
-    }
-    return wrap;
-  }
-
-  document.querySelectorAll(".play-btn").forEach(function (btn) {
-    var card = btn.closest("[data-video], [data-embed]");
-    if (!card) return; // no source wired yet -> button stays inert
-    btn.addEventListener("click", function () {
-      var overlay = card.querySelector(
-        ".testimonial-card__overlay, .video-card__label"
+      iframe.setAttribute(
+        "src",
+        "https://www.youtube-nocookie.com/embed/" + id +
+          "?autoplay=1&rel=0&modestbranding=1&playsinline=1"
       );
-      var player = buildPlayer(card);
-      if (overlay) {
-        overlay.replaceWith(player);
-      } else {
-        card.appendChild(player);
-      }
+      iframe.setAttribute("title", facade.getAttribute("aria-label") || "Depoimento em vídeo");
+      iframe.setAttribute(
+        "allow",
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      );
+      iframe.setAttribute("allowfullscreen", "");
+      var card = facade.closest(".testimonial-card");
+      facade.replaceWith(iframe);
+      if (card) iframe.focus();
     });
   });
 
