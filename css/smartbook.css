@@ -94,11 +94,10 @@
     position: relative;
     background:
       linear-gradient(90deg,
-        var(--bg-deep) 0%,
-        rgba(20, 23, 27, 0.96) 38%,
-        rgba(20, 23, 27, 0.6) 60%,
-        rgba(20, 23, 27, 0.12) 82%,
-        rgba(20, 23, 27, 0) 100%),
+        rgba(20, 23, 27, 0.90) 0%,
+        rgba(20, 23, 27, 0.70) 30%,
+        rgba(20, 23, 27, 0.32) 50%,
+        rgba(20, 23, 27, 0) 68%),
       url("../assets/img/smartbook-hero.webp") right center / cover no-repeat,
       var(--bg-deep);
   }
