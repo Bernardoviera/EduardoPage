@@ -209,3 +209,39 @@
 
 /* Limited-spots note */
 .co-limited { margin-top: var(--space-4); text-align: center; color: var(--gold); font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.8rem; }
+
+/* ==========================================================================
+   Presencial theme — green identity (matches its own material).
+   Amber is kept ONLY for price/urgency so it still pops against the green.
+   ========================================================================== */
+body.theme-presencial {
+  --gold: #22C55E;
+  --gold-deep: #16A34A;
+  --shadow-gold: 0 12px 30px rgba(34, 197, 94, 0.28);
+}
+/* restore amber on price + urgency */
+body.theme-presencial .co-price-box { border-top-color: #F5A524; }
+body.theme-presencial .co-price-box__eyebrow { color: #C2410C; }
+body.theme-presencial .co-limited { color: #F5A524; }
+body.theme-presencial .co-discount { background: rgba(245,165,36,0.12); border-color: rgba(245,165,36,0.4); }
+body.theme-presencial .co-discount strong { color: #F5A524; }
+body.theme-presencial .co-discount__badge { background: #F5A524; color: #14171B; }
+
+/* ---- Hero seal (presencial hero — replaces the checklist card) ---- */
+.co-seal { display: flex; flex-direction: column; align-items: center; gap: var(--space-4); }
+.co-seal__badge {
+  width: clamp(210px, 42vw, 280px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; gap: 0.4rem; padding: var(--space-4);
+  background: radial-gradient(circle at 50% 32%, rgba(34,197,94,0.20), transparent 68%), var(--bg-panel-2);
+  border: 2px solid var(--primary);
+  box-shadow: 0 0 0 7px rgba(34,197,94,0.12), var(--shadow-lg);
+  color: #fff;
+}
+.co-seal__badge small { font-size: 0.7rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--primary-light); }
+.co-seal__badge strong { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(1.4rem, 4vw, 1.95rem); line-height: 1; }
+.co-seal__stars { color: var(--primary-light); letter-spacing: 0.15em; }
+.co-seal__stat { text-align: center; color: var(--text-muted-on-dark); font-size: 0.95rem; }
+.co-seal__stat strong { font-family: var(--font-display); font-weight: 800; font-size: 2rem; color: var(--primary-light); margin-right: 0.35rem; }
