@@ -1,57 +1,39 @@
 /* ==========================================================================
-   Self-hosted fonts (Barlow + Barlow Condensed) — subset latin, woff2
+   Self-hosted font: Archivo (headings + body) — subset latin, woff2
    Served locally for performance, reliability and privacy (no external CDN).
    ========================================================================== */
-
-/* Barlow — body */
 @font-face {
-  font-family: "Barlow";
+  font-family: "Archivo";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../assets/fonts/barlow-latin-400-normal.woff2") format("woff2");
+  src: url("../assets/fonts/archivo-latin-400-normal.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Barlow";
+  font-family: "Archivo";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../assets/fonts/barlow-latin-500-normal.woff2") format("woff2");
+  src: url("../assets/fonts/archivo-latin-500-normal.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Barlow";
+  font-family: "Archivo";
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../assets/fonts/barlow-latin-600-normal.woff2") format("woff2");
+  src: url("../assets/fonts/archivo-latin-600-normal.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Barlow";
+  font-family: "Archivo";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../assets/fonts/barlow-latin-700-normal.woff2") format("woff2");
-}
-
-/* Barlow Condensed — display / headings */
-@font-face {
-  font-family: "Barlow Condensed";
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("../assets/fonts/barlow-condensed-latin-500-normal.woff2") format("woff2");
+  src: url("../assets/fonts/archivo-latin-700-normal.woff2") format("woff2");
 }
 @font-face {
-  font-family: "Barlow Condensed";
+  font-family: "Archivo";
   font-style: normal;
-  font-weight: 600;
+  font-weight: 800;
   font-display: swap;
-  src: url("../assets/fonts/barlow-condensed-latin-600-normal.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Barlow Condensed";
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("../assets/fonts/barlow-condensed-latin-700-normal.woff2") format("woff2");
+  src: url("../assets/fonts/archivo-latin-800-normal.woff2") format("woff2");
 }
