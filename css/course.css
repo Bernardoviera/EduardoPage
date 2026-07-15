@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Course pages (Operadores de Elite — virtual & presencial)
+   Shared components. Builds on styles.css tokens + reuses smartbook.css.
+   ========================================================================== */
+
+.accent { color: var(--gold); }
+
+/* ---- Hero ---- */
+.co-hero {
+  background:
+    radial-gradient(120% 100% at 100% 0%, rgba(245, 165, 36, 0.16), transparent 55%),
+    linear-gradient(180deg, var(--bg-deep), var(--bg-panel));
+  color: var(--text-on-dark);
+  padding-top: var(--space-7);
+  overflow: hidden;
+}
+.co-hero__grid { display: grid; gap: var(--space-6); align-items: center; }
+@media (min-width: 940px) { .co-hero__grid { grid-template-columns: 1.05fr 0.95fr; } }
+.co-hero h1 { font-size: clamp(2.1rem, 4.8vw, 3.4rem); color: #fff; }
+.co-lede {
+  margin-top: var(--space-4);
+  color: var(--text-muted-on-dark);
+  font-size: 1.1rem;
+  max-width: 34rem;
+}
+.co-lede strong { color: var(--text-on-dark); }
+.co-hero__points { margin-top: var(--space-4); display: grid; gap: 0.6rem; }
+.co-hero__points li { display: flex; align-items: center; gap: 0.6rem; font-weight: 500; }
+.co-hero__points svg { color: var(--primary-light); flex-shrink: 0; }
+.co-hero__cta { margin-top: var(--space-5); display: flex; flex-wrap: wrap; gap: var(--space-3); }
+.co-hero .btn-ghost { color: var(--text-on-dark); }
+
+/* Hero side card (what's included / bonus highlight) */
+.co-herocard {
+  background: var(--bg-panel-2);
+  border: 1px solid var(--border-dark);
+  border-top: 4px solid var(--gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-lg);
+}
+.co-herocard__eyebrow {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold);
+}
+.co-herocard h2 { font-size: 1.3rem; color: #fff; margin: 0.4rem 0 var(--space-3); }
+.co-herocard ul { display: grid; gap: 0.55rem; }
+.co-herocard li { display: flex; align-items: flex-start; gap: 0.55rem; font-size: 0.95rem; color: var(--text-on-dark); }
+.co-herocard li svg { color: var(--primary-light); flex-shrink: 0; margin-top: 2px; }
+
+/* ---- Problem vs Change ---- */
+.co-shift { background: var(--surface-light); }
+.co-shift__grid { display: grid; gap: var(--space-4); }
+@media (min-width: 820px) { .co-shift__grid { grid-template-columns: 1fr 1fr; } }
+.co-panel {
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  border: 1px solid var(--border-light);
+  background: var(--surface-card);
+}
+.co-panel h3 { font-size: 1.2rem; margin-bottom: var(--space-3); }
+.co-panel ul { display: grid; gap: 0.6rem; }
+.co-panel li { display: flex; align-items: flex-start; gap: 0.55rem; font-size: 0.96rem; }
+.co-panel li svg { flex-shrink: 0; margin-top: 2px; }
+.co-panel--problem { background: #FBF4F2; border-color: #F0D9D2; }
+.co-panel--problem h3 { color: #9A3412; }
+.co-panel--problem li svg { color: var(--danger); }
+.co-panel--change { border-color: rgba(23,162,74,0.35); }
+.co-panel--change h3 { color: var(--primary-hover); }
+.co-panel--change li svg { color: var(--primary); }
+
+/* ---- Results (stat rows on dark) ---- */
+.co-results { background: linear-gradient(180deg, var(--bg-panel), var(--bg-deep)); color: var(--text-on-dark); }
+.co-results__grid { display: grid; gap: var(--space-4); }
+@media (min-width: 760px) { .co-results__grid { grid-template-columns: repeat(3, 1fr); } }
+.co-stat {
+  text-align: center;
+  background: var(--bg-panel-2);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+.co-stat__icon {
+  width: 56px; height: 56px; margin: 0 auto var(--space-3);
+  border-radius: 14px; display: flex; align-items: center; justify-content: center;
+  background: rgba(245,165,36,0.14); color: var(--gold);
+}
+.co-stat__value { font-family: var(--font-display); font-weight: 800; font-size: 2.8rem; line-height: 1; color: #fff; }
+.co-stat__value small { display: block; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase; margin-bottom: 0.2rem; }
+.co-stat__label { margin-top: 0.5rem; color: var(--text-muted-on-dark); font-size: 0.95rem; }
+
+/* ---- Mentoria / bonus highlight ---- */
+.co-bonus { background: var(--surface-light); }
+.co-bonus__card {
+  display: grid; gap: var(--space-5); align-items: center;
+  background: linear-gradient(160deg, var(--bg-panel-2), var(--bg-deep));
+  color: var(--text-on-dark);
+  border: 1px solid var(--border-dark);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+}
+@media (min-width: 860px) { .co-bonus__card { grid-template-columns: 1fr 1fr; } }
+.co-bonus__tag {
+  display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #14171B; background: var(--gold);
+  padding: 0.25rem 0.7rem; border-radius: var(--radius-pill); margin-bottom: var(--space-3);
+}
+.co-bonus__card h2 { color: #fff; font-size: clamp(1.6rem, 3.5vw, 2.2rem); }
+.co-bonus__card p { color: var(--text-muted-on-dark); margin-top: var(--space-3); }
+
+/* ---- Pricing (single plan) ---- */
+.co-price-sec {
+  background: radial-gradient(90% 120% at 100% 0%, rgba(23,162,74,0.12), transparent 55%),
+              linear-gradient(180deg, var(--bg-deep), #0F1215);
+  color: var(--text-on-dark);
+}
+.co-price-box {
+  max-width: 520px; margin-inline: auto; text-align: center;
+  background: var(--surface-card); color: var(--text-on-light);
+  border: 1px solid var(--border-light); border-top: 5px solid var(--gold);
+  border-radius: var(--radius-lg); padding: var(--space-6) var(--space-5);
+  box-shadow: var(--shadow-lg);
+}
+.co-price-box__eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-deep); }
+.co-price-box__value { font-family: var(--font-display); font-weight: 800; font-size: clamp(3rem, 8vw, 4rem); line-height: 1; margin: 0.3rem 0; }
+.co-price-box__value small { font-size: 1.2rem; vertical-align: super; }
+.co-price-box__install { color: var(--text-muted-on-light); font-weight: 600; }
+.co-price-box__note { color: var(--text-muted-on-light); font-size: 0.9rem; margin: var(--space-3) 0 var(--space-4); }
+.co-pay { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-top: var(--space-4); }
+.co-pay span {
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em; color: var(--text-muted-on-light);
+  border: 1px solid var(--border-light); border-radius: var(--radius-sm); padding: 0.3rem 0.6rem;
+}
+.co-price-box__secure { display: flex; align-items: center; justify-content: center; gap: 0.4rem; margin-top: var(--space-3); font-size: 0.82rem; color: var(--text-muted-on-light); }
+.co-price-box__secure svg { color: var(--primary); }
+
+/* ---- Guarantees ---- */
+.co-guarantees { background: var(--surface-light); }
+.co-guar-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+@media (min-width: 760px) { .co-guar-grid { grid-template-columns: repeat(3, 1fr); } }
+.co-guar {
+  text-align: center; background: var(--surface-card);
+  border: 1px solid var(--border-light); border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+.co-guar__icon {
+  width: 58px; height: 58px; margin: 0 auto var(--space-3);
+  border-radius: 15px; display: flex; align-items: center; justify-content: center;
+  background: rgba(23,162,74,0.12); color: var(--primary);
+}
+.co-guar h3 { font-size: 1.1rem; margin-bottom: 0.35rem; }
+.co-guar p { color: var(--text-muted-on-light); font-size: 0.9rem; }

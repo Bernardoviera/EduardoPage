@@ -3,12 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Operadores de Elite | Formação em Perfuração e Demolição Controlada</title>
-<meta name="description" content="Torne-se um Operador de Elite: reduza quebras de equipamento, corte custos com insumos e eleve o padrão da sua equipe em perfuração e demolição controlada.">
+<title>Operadores de Elite | Formação Online em Perfuração, Corte e Demolição Controlada</title>
+<meta name="description" content="Formação completa online para perfuração, corte e demolição controlada. Torne-se um operador qualificado, produtivo e valorizado — com mentoria ao vivo, certificado e 7 dias de garantia. Acesso por R$ 997.">
 <link rel="preload" href="../assets/fonts/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/fonts/archivo-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../css/fonts.css">
 <link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/smartbook.css">
+<link rel="stylesheet" href="../css/course.css">
 </head>
 <body>
 
@@ -17,23 +19,29 @@
 <!-- Reusable SVG icon sprite -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
   <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></symbol>
-  <symbol id="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></symbol>
-  <symbol id="icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></symbol>
+  <symbol id="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
   <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
   <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.47 1.29 4.93L2 22l5.25-1.38c1.41.77 3.02 1.21 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.91 6.45 17.5 2 12.04 2Zm5.7 14.08c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.12.11-1.81-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.17-4.94-4.37-.15-.2-1.18-1.57-1.18-3 0-1.42.75-2.12 1.02-2.41.27-.29.58-.36.78-.36.2 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.14.07.15.12.32.02.52-.1.2-.15.32-.29.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.61.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.15.46.13.63-.08.17-.2.72-.84.91-1.13.19-.29.39-.24.65-.15.27.1 1.69.8 1.98.94.29.15.48.22.55.34.07.13.07.72-.17 1.4Z"/></symbol>
-  <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Z"/><polyline points="9 12 11 14 15 10"/></symbol>
-  <symbol id="icon-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v6m0 6v6M3 12h6m6 0h6"/></symbol>
+  <symbol id="icon-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></symbol>
+  <symbol id="icon-monitor" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></symbol>
+  <symbol id="icon-bolt" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+  <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v18H6.5A2.5 2.5 0 0 0 4 22.5z"/><path d="M4 4.5A2.5 2.5 0 0 0 6.5 7H20"/></symbol>
   <symbol id="icon-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></symbol>
-  <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></symbol>
-  <symbol id="icon-youtube" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="4"/><polygon points="10 9 16 12 10 15" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="icon-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></symbol>
+  <symbol id="icon-headset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M4 14a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h1v-5H4zM20 14h-1v5h1a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2z"/><path d="M18 19a4 4 0 0 1-4 3h-2"/></symbol>
+  <symbol id="icon-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v6m0 6v6M3 12h6m6 0h6"/></symbol>
+  <symbol id="icon-dollar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></symbol>
+  <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V5l-8-3Z"/><polyline points="9 12 11 14 15 10"/></symbol>
+  <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="icon-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M9 22v-4h6v4M8 6h.01M12 6h.01M16 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></symbol>
+  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="icon-devices" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="10" rx="1"/><path d="M2 18h14"/><rect x="17" y="8" width="5" height="12" rx="1"/></symbol>
 </svg>
 
-<!-- ==========================================================================
-     Header
-     ========================================================================== -->
+<!-- Header -->
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="#main" aria-label="Operadores de Elite — ir para o início">
+    <a class="brand" href="../" aria-label="Qi em Construção — página inicial">
       <span class="brand-mark" aria-hidden="true">OE</span>
       <span class="brand-word">
         <span class="brand-word__top">Operadores de</span>
@@ -42,11 +50,11 @@
     </a>
     <div class="header-right">
       <span class="header-partner">
-        <span class="header-partner__label">Parceria</span>
+        <span class="header-partner__label">Formação online</span>
         <strong>Qi em Construção</strong>
       </span>
-      <a class="btn btn-primary header-cta" href="#oferta">
-        Garantir oferta
+      <a class="btn btn-primary header-cta" href="#preco">
+        Matricular
         <svg width="18" height="18" aria-hidden="true"><use href="#icon-arrow"/></svg>
       </a>
     </div>
@@ -55,257 +63,219 @@
 
 <main id="main">
 
-  <!-- ========================================================================
-       Hero
-       ======================================================================== -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-copy">
-        <span class="eyebrow">Formação profissional · Perfuração e demolição controlada</span>
-        <h1>Seja um <span class="accent">Operador de Elite</span> no mercado de construção</h1>
-        <p class="hero-lede">
-          Aprenda as técnicas avançadas de perfuração, corte e demolição controlada. Aumente sua produtividade,
-          economize em máquinas e equipamentos e coloque sua equipe no topo do mercado — mesmo que você esteja
-          começando agora.
+  <!-- Hero -->
+  <section class="co-hero">
+    <div class="container co-hero__grid">
+      <div class="co-hero__copy">
+        <span class="eyebrow">Formação profissional · 100% online</span>
+        <h1>Formação completa em <span class="accent">perfuração, corte e demolição controlada</span></h1>
+        <p class="co-lede">
+          O treinamento online mais completo do mercado para quem quer se tornar um profissional
+          <strong>qualificado, produtivo e valorizado</strong> — mesmo começando do zero.
         </p>
-
-        <ul class="hero-points">
-          <li><svg width="20" height="20"><use href="#icon-check"/></svg> Metodologia validada em obras reais de infraestrutura</li>
-          <li><svg width="20" height="20"><use href="#icon-check"/></svg> Reduza quebras de equipamento e retrabalho na equipe</li>
-          <li><svg width="20" height="20"><use href="#icon-check"/></svg> Acesso vitalício + aulões ao vivo inclusos</li>
+        <ul class="co-hero__points">
+          <li><svg width="20" height="20"><use href="#icon-check"/></svg> Acesso imediato e vitalício, no seu ritmo</li>
+          <li><svg width="20" height="20"><use href="#icon-check"/></svg> Mentoria ao vivo (1h30) com Eduardo Santos</li>
+          <li><svg width="20" height="20"><use href="#icon-check"/></svg> Certificado reconhecido + 7 dias de garantia</li>
         </ul>
-
-        <div class="hero-cta-row">
-          <a class="btn btn-primary btn-lg" href="#oferta">Quero garantir a oferta</a>
-          <a class="btn btn-ghost" href="#faq">Ver perguntas frequentes</a>
-        </div>
-
-        <div class="trust-row">
-          <span class="stars" aria-hidden="true">★★★★★</span>
-          <span>Formação reconhecida por profissionais e empresas do setor</span>
+        <div class="co-hero__cta">
+          <a class="btn btn-primary btn-lg" href="#preco">Quero me matricular <svg width="18" height="18" aria-hidden="true"><use href="#icon-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="#modulos">Ver os módulos</a>
         </div>
       </div>
 
-      <div class="hero-media">
-        <div class="video-card" role="group" aria-label="Vídeo de apresentação: Nossos Valores Black Elite">
-          <span class="video-card__tag">Vídeo de apresentação</span>
-          <div class="video-card__label">
-            <p class="video-card__badge">Nossos valores<span>BLACK ELITE</span></p>
-            <button class="play-btn" type="button" aria-label="Reproduzir vídeo de apresentação">
-              <svg width="28" height="28"><use href="#icon-play"/></svg>
-            </button>
-            <!-- TODO: substituir por embed real (YouTube/Vimeo) quando o vídeo for enviado -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       Platform preview
-       ======================================================================== -->
-  <section class="platform" aria-labelledby="platform-heading">
-    <div class="container">
-      <div class="section-head section-head--dark">
-        <span class="section-kicker">Área de membros</span>
-        <h2 id="platform-heading">Bem-vindos à nossa plataforma</h2>
-        <p class="section-head-desc">Conteúdo organizado em módulos práticos, liberado no seu ritmo, com acesso pelo computador ou celular.</p>
-      </div>
-
-      <div class="platform-frame" data-reveal>
-        <div class="platform-frame__bar" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="module-grid">
-          <article class="module-card">
-            <div class="module-card__thumb"><img src="../assets/img/modulo-1.webp" width="720" height="576" alt="" loading="lazy"></div>
-            <div class="module-card__body">
-              <span class="module-card__eyebrow">Módulo 01</span>
-              <p class="module-card__title">Introdução ao Profissional</p>
-            </div>
-          </article>
-          <article class="module-card">
-            <div class="module-card__thumb"><img src="../assets/img/modulo-2.webp" width="720" height="576" alt="" loading="lazy"></div>
-            <div class="module-card__body">
-              <span class="module-card__eyebrow">Módulo 02</span>
-              <p class="module-card__title">Técnicas de Perfuração</p>
-            </div>
-          </article>
-          <article class="module-card">
-            <div class="module-card__thumb"><img src="../assets/img/modulo-3.webp" width="720" height="576" alt="" loading="lazy"></div>
-            <div class="module-card__body">
-              <span class="module-card__eyebrow">Módulo 03</span>
-              <p class="module-card__title">Segurança em Obra</p>
-            </div>
-          </article>
-          <article class="module-card">
-            <div class="module-card__thumb"><img src="../assets/img/modulo-4.webp" width="720" height="576" alt="" loading="lazy"></div>
-            <div class="module-card__body">
-              <span class="module-card__eyebrow">Módulo 04</span>
-              <p class="module-card__title">Inteligência Técnica</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       Benefits / stats
-       ======================================================================== -->
-  <section class="benefits" aria-labelledby="benefits-heading">
-    <div class="container">
-      <div class="benefit-copy">
-        <div class="section-head" style="text-align:left; margin-inline:0;">
-          <span class="section-kicker">Resultados comprovados</span>
-          <h2 id="benefits-heading">Os benefícios do Operador de Elite</h2>
-        </div>
-
-        <div class="benefit-list" data-reveal>
-          <div class="benefit-item">
-            <span class="benefit-num" aria-hidden="true">01</span>
-            <div>
-              <h3>Menos quebra de equipamento</h3>
-              <p><span class="stat">70% a menos</span> de máquinas quebradas e obras paradas, comprovado em campo.</p>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <span class="benefit-num" aria-hidden="true">02</span>
-            <div>
-              <h3>Menos gasto com brocas e insumos</h3>
-              <p>Até <span class="stat">40% de economia</span> em brocas, insumos e equipamentos de proteção (EPIs).</p>
-            </div>
-          </div>
-          <div class="benefit-item">
-            <span class="benefit-num" aria-hidden="true">03</span>
-            <div>
-              <h3>Menos reclamações e acidentes</h3>
-              <p><span class="stat">97% menos acidentes</span> e maior satisfação de clientes e equipes.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero-cta-row">
-          <a class="btn btn-primary" href="#oferta">Quero garantir a oferta</a>
-          <a class="btn btn-whatsapp" href="https://wa.me/5511947504241?text=Ol%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20o%20curso%20Operadores%20de%20Elite" target="_blank" rel="noopener">
-            <svg width="18" height="18"><use href="#icon-whatsapp"/></svg>
-            Tirar dúvidas no WhatsApp
-          </a>
-        </div>
-      </div>
-
-      <aside class="stat-panel" data-reveal aria-label="Resumo de lucro e redução de problemas">
-        <div class="stat-panel__head">
-          <span class="up">+ Lucro</span>
-          <span class="down">− Problema</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-row__label">Quebra de máquinas</span>
-          <span class="stat-row__value">−70%</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-row__label">Gasto com brocas</span>
-          <span class="stat-row__value">−40%</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-row__label">Acidentes em obra</span>
-          <span class="stat-row__value">−97%</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-row__label">Satisfação do cliente</span>
-          <span class="stat-row__value" style="color:var(--primary-light)">↑ Maior</span>
-        </div>
+      <aside class="co-herocard" aria-label="O que está incluso">
+        <span class="co-herocard__eyebrow">Ao se matricular você recebe</span>
+        <h2>Acesso completo à formação</h2>
+        <ul>
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> Curso completo 100% online</li>
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> Vídeos exclusivos e apostilas</li>
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> Certificado reconhecido</li>
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> Atualizações gratuitas + suporte</li>
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> <strong>Brinde:</strong> mentoria ao vivo com Eduardo Santos</li>
+        </ul>
       </aside>
     </div>
   </section>
 
-  <!-- ========================================================================
-       Offer
-       ======================================================================== -->
-  <section class="offer" id="oferta" aria-labelledby="offer-heading">
+  <!-- What you get (badges) -->
+  <section class="sb-badges-sec" aria-label="O que você recebe">
     <div class="container">
-      <div class="section-head section-head--dark">
-        <span class="section-kicker">Oferta Black Elite</span>
-        <h2 id="offer-heading">Vantagens Black Elite</h2>
+      <ul class="sb-badges">
+        <li><span class="sb-badge__i"><svg width="22" height="22"><use href="#icon-monitor"/></svg></span> Curso 100% online</li>
+        <li><span class="sb-badge__i"><svg width="22" height="22"><use href="#icon-bolt"/></svg></span> Acesso imediato</li>
+        <li><span class="sb-badge__i"><svg width="22" height="22"><use href="#icon-play"/></svg></span> Vídeos exclusivos</li>
+        <li><span class="sb-badge__i"><svg width="22" height="22"><use href="#icon-book"/></svg></span> Apostilas e materiais</li>
+        <li><span class="sb-badge__i"><svg width="22" height="22"><use href="#icon-award"/></svg></span> Certificado reconhecido</li>
+        <li><span class="sb-badge__i"><svg width="22" height="22"><use href="#icon-refresh"/></svg></span> Atualizações gratuitas</li>
+        <li><span class="sb-badge__i"><svg width="22" height="22"><use href="#icon-headset"/></svg></span> Suporte especializado</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Problem vs Change -->
+  <section class="co-shift" aria-labelledby="shift-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">Antes e depois</span>
+        <h2 id="shift-heading">O que muda quando você se profissionaliza</h2>
       </div>
-
-      <div class="offer-stack" data-reveal>
-        <div class="offer-item">
-          <div class="offer-item__icon"><svg width="26" height="26"><use href="#icon-tool"/></svg></div>
-          <div>
-            <p class="offer-item__title">Curso Operadores de Elite + 4 aulões gravados</p>
-          </div>
-          <span class="offer-item__price">R$ 1.699</span>
+      <div class="co-shift__grid">
+        <div class="co-panel co-panel--problem">
+          <h3>O problema da maioria dos operadores</h3>
+          <ul>
+            <li><svg width="18" height="18"><use href="#icon-x"/></svg> Aprende na prática e comete erros</li>
+            <li><svg width="18" height="18"><use href="#icon-x"/></svg> Quebra equipamentos</li>
+            <li><svg width="18" height="18"><use href="#icon-x"/></svg> Desperdiça brocas e insumos</li>
+            <li><svg width="18" height="18"><use href="#icon-x"/></svg> Baixa produtividade</li>
+            <li><svg width="18" height="18"><use href="#icon-x"/></svg> Riscos de acidentes</li>
+            <li><svg width="18" height="18"><use href="#icon-x"/></svg> Falta de conhecimento técnico</li>
+            <li><svg width="18" height="18"><use href="#icon-x"/></svg> Não consegue crescer na profissão</li>
+          </ul>
         </div>
-
-        <div class="offer-plus" aria-hidden="true">+</div>
-
-        <div class="offer-item">
-          <div class="offer-item__icon"><svg width="26" height="26"><use href="#icon-shield"/></svg></div>
-          <div>
-            <p class="offer-item__title">Curso Qualidade 5S + Plano 10</p>
-          </div>
-          <span class="offer-item__price">R$ 397</span>
+        <div class="co-panel co-panel--change">
+          <h3>O que muda depois do curso</h3>
+          <ul>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Técnicas corretas e seguras</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Mais produtividade e precisão</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Economia de brocas e equipamentos</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Execução profissional dos serviços</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Redução de riscos e acidentes</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Domínio dos equipamentos</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Mais oportunidades e melhores ganhos</li>
+          </ul>
         </div>
-
-        <div class="offer-plus" aria-hidden="true">+</div>
-
-        <div class="offer-item">
-          <div class="offer-item__icon"><svg width="26" height="26"><use href="#icon-award"/></svg></div>
-          <div>
-            <p class="offer-item__title">2 aulas Operadores 2025, ao vivo</p>
-            <p class="offer-item__sub">04/12 e 11/12, às 19h30</p>
-          </div>
-          <span class="offer-item__price">R$ 499</span>
-        </div>
-
-        <div class="offer-plus" aria-hidden="true">+</div>
-
-        <div class="offer-item">
-          <div class="offer-item__icon"><svg width="26" height="26"><use href="#icon-check"/></svg></div>
-          <div>
-            <p class="offer-item__title">Workshop especial: custos, vendas e orçamentos</p>
-            <p class="offer-item__sub">Janeiro/26</p>
-          </div>
-          <span class="offer-item__price">R$ 199</span>
-        </div>
-      </div>
-
-      <div class="offer-total">
-        <p class="offer-total__label">Total em cursos</p>
-        <p class="offer-total__value">R$ 2.700</p>
-        <p class="offer-callout">Mas na Black você não paga isso.</p>
-      </div>
-
-      <div class="price-box" data-reveal>
-        <p class="price-box__eyebrow">Tudo isso, investindo apenas</p>
-        <p class="price-box__value">12x R$ 98,24</p>
-        <p class="price-box__note">ou à vista com desconto</p>
-        <a class="btn btn-primary btn-lg btn-block" href="https://pay.hotmart.com/W94432020C?off=xw322nuk&amp;bid=1763497678567" target="_blank" rel="noopener">
-          Quero garantir a oferta
-        </a>
       </div>
     </div>
   </section>
 
-  <!-- ========================================================================
-       Testimonials
-       ======================================================================== -->
+  <!-- Results -->
+  <section class="co-results" aria-labelledby="results-heading">
+    <div class="container">
+      <div class="section-head section-head--dark">
+        <span class="section-kicker">Resultados comprovados</span>
+        <h2 id="results-heading">O que os nossos alunos alcançam</h2>
+      </div>
+      <div class="co-results__grid">
+        <div class="co-stat">
+          <span class="co-stat__icon"><svg width="26" height="26"><use href="#icon-tool"/></svg></span>
+          <p class="co-stat__value"><small>Até</small>70%</p>
+          <p class="co-stat__label">menos quebra de equipamentos e paradas na obra</p>
+        </div>
+        <div class="co-stat">
+          <span class="co-stat__icon"><svg width="26" height="26"><use href="#icon-dollar"/></svg></span>
+          <p class="co-stat__value"><small>Até</small>40%</p>
+          <p class="co-stat__label">de economia com brocas, insumos e equipamentos</p>
+        </div>
+        <div class="co-stat">
+          <span class="co-stat__icon"><svg width="26" height="26"><use href="#icon-shield"/></svg></span>
+          <p class="co-stat__value"><small>Até</small>97%</p>
+          <p class="co-stat__label">de redução de acidentes e maior satisfação de clientes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modules -->
+  <section class="sb-receive" id="modulos" aria-labelledby="modules-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">Conteúdo</span>
+        <h2 id="modules-heading">4 módulos completos</h2>
+      </div>
+      <div class="sb-cards">
+        <article class="sb-card">
+          <div class="sb-card__head"><span class="sb-card__num">01</span><h3>Introdução</h3></div>
+          <ul class="sb-check">
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Fundamentos do mercado</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Tipos de serviços</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Equipamentos e acessórios</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Planejamento inicial</li>
+          </ul>
+        </article>
+        <article class="sb-card">
+          <div class="sb-card__head"><span class="sb-card__num">02</span><h3>Inteligência do operador</h3></div>
+          <ul class="sb-check">
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Técnicas de perfuração</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Escolha da broca correta</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Parâmetros e regulagens</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Produtividade e eficiência</li>
+          </ul>
+        </article>
+        <article class="sb-card">
+          <div class="sb-card__head"><span class="sb-card__num">03</span><h3>Segurança</h3></div>
+          <ul class="sb-check">
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Normas e EPIs</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Prevenção de acidentes</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Ambiente seguro de trabalho</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Procedimentos essenciais</li>
+          </ul>
+        </article>
+        <article class="sb-card">
+          <div class="sb-card__head"><span class="sb-card__num">04</span><h3>Inteligência técnica</h3></div>
+          <ul class="sb-check">
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Cortes com disco e fio</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Demolição controlada</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Soluções para cada situação</li>
+            <li><svg width="18" height="18"><use href="#icon-check"/></svg> Casos reais de obras</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audience -->
+  <section class="sb-learn" aria-labelledby="audience-heading">
+    <div class="container">
+      <div class="section-head sb-colhead">
+        <span class="section-kicker">Público</span>
+        <h2 id="audience-heading">Para quem é este curso</h2>
+      </div>
+      <ul class="sb-audience">
+        <li><span class="sb-audience__i"><svg width="20" height="20"><use href="#icon-tool"/></svg></span> Operadores e ajudantes que querem se qualificar</li>
+        <li><span class="sb-audience__i"><svg width="20" height="20"><use href="#icon-users"/></svg></span> Empresas que desejam treinar suas equipes</li>
+        <li><span class="sb-audience__i"><svg width="20" height="20"><use href="#icon-building"/></svg></span> Empreendedores que querem abrir seu próprio negócio</li>
+        <li><span class="sb-audience__i"><svg width="20" height="20"><use href="#icon-shield"/></svg></span> Engenheiros e técnicos da construção civil</li>
+        <li><span class="sb-audience__i"><svg width="20" height="20"><use href="#icon-award"/></svg></span> Iniciantes que querem entrar no mercado</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Mentoria bonus -->
+  <section class="co-bonus" aria-labelledby="bonus-heading">
+    <div class="container">
+      <div class="co-bonus__card" data-reveal>
+        <div>
+          <span class="co-bonus__tag">Brinde exclusivo</span>
+          <h2 id="bonus-heading">Mentoria ao vivo (1h30) com Eduardo Santos</h2>
+          <p>Após 30 dias de acesso ao curso, você participa de uma mentoria individual ao vivo com o Eduardo para tirar todas as suas dúvidas.</p>
+        </div>
+        <ul class="sb-check">
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> Execução dos serviços</li>
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> Escolha de equipamentos</li>
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> Parâmetros e regulagens</li>
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> Segurança e EPIs</li>
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> Orçamentos e precificação</li>
+          <li><svg width="18" height="18"><use href="#icon-check"/></svg> Dificuldades do seu dia a dia e crescimento profissional</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
   <section class="testimonials" aria-labelledby="testimonials-heading">
     <div class="container">
       <div class="section-head">
         <span class="section-kicker">Prova social</span>
         <h2 id="testimonials-heading">Depoimentos de alunos</h2>
       </div>
-
       <div class="testimonial-grid" data-reveal>
         <article class="testimonial-card">
           <button class="testimonial-facade" type="button" data-yt="-hw8bR7GfJQ" aria-label="Reproduzir depoimento em vídeo de Iago">
             <img class="testimonial-thumb" src="https://i.ytimg.com/vi/-hw8bR7GfJQ/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">
             <span class="testimonial-card__overlay">
               <span class="play-btn" aria-hidden="true"><svg width="24" height="24"><use href="#icon-play"/></svg></span>
-              <span class="testimonial-card__meta">
-                <strong>Iago</strong>
-                <span>Aluno · Operador de Elite</span>
-              </span>
+              <span class="testimonial-card__meta"><strong>Iago</strong><span>Aluno · Operador de Elite</span></span>
             </span>
           </button>
         </article>
@@ -314,10 +284,7 @@
             <img class="testimonial-thumb" src="https://i.ytimg.com/vi/LQ69SSLfltA/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">
             <span class="testimonial-card__overlay">
               <span class="play-btn" aria-hidden="true"><svg width="24" height="24"><use href="#icon-play"/></svg></span>
-              <span class="testimonial-card__meta">
-                <strong>Caio</strong>
-                <span>Aluno · Operador de Elite</span>
-              </span>
+              <span class="testimonial-card__meta"><strong>Caio</strong><span>Aluno · Operador de Elite</span></span>
             </span>
           </button>
         </article>
@@ -326,10 +293,7 @@
             <img class="testimonial-thumb" src="https://i.ytimg.com/vi/2UkSmGx_q94/hqdefault.jpg" alt="" loading="lazy" onerror="this.remove()">
             <span class="testimonial-card__overlay">
               <span class="play-btn" aria-hidden="true"><svg width="24" height="24"><use href="#icon-play"/></svg></span>
-              <span class="testimonial-card__meta">
-                <strong>Alex</strong>
-                <span>Aluno · Operador de Elite</span>
-              </span>
+              <span class="testimonial-card__meta"><strong>Alex</strong><span>Aluno · Operador de Elite</span></span>
             </span>
           </button>
         </article>
@@ -337,73 +301,54 @@
     </div>
   </section>
 
-  <!-- ========================================================================
-       FAQ
-       ======================================================================== -->
-  <section class="faq" id="faq" aria-labelledby="faq-heading">
+  <!-- Price -->
+  <section class="co-price-sec" id="preco" aria-labelledby="price-heading">
     <div class="container">
       <div class="section-head section-head--dark">
-        <span class="section-kicker">Dúvidas frequentes</span>
-        <h2 id="faq-heading">Perguntas frequentes</h2>
+        <span class="section-kicker">Investimento</span>
+        <h2 id="price-heading">Dê o próximo passo na sua carreira</h2>
       </div>
-
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>Para quem é o curso Operadores de Elite?
-            <svg class="chevron" width="20" height="20"><use href="#icon-chevron"/></svg>
-          </summary>
-          <p>O curso é ideal para equipes e empresas que desejam se especializar no ramo de perfurações, treinando corretamente o manuseio de máquinas e se tornando um profissional destacado no mercado.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Estou pensando em abrir uma empresa nesse ramo. O curso funciona para mim?
-            <svg class="chevron" width="20" height="20"><use href="#icon-chevron"/></svg>
-          </summary>
-          <p>Com certeza. Esse é o melhor caminho para quem quer abrir um negócio na área, já que o conteúdo aborda as habilidades e estratégias necessárias para atuar de forma diferenciada no mercado.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Para quem não é indicado?
-            <svg class="chevron" width="20" height="20"><use href="#icon-chevron"/></svg>
-          </summary>
-          <p>Para quem acredita em fórmulas mágicas e atalhos milagrosos que dão resultado da noite para o dia, sem precisar se esforçar.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Por quanto tempo terei acesso ao curso e aos módulos?
-            <svg class="chevron" width="20" height="20"><use href="#icon-chevron"/></svg>
-          </summary>
-          <p>Você tem acesso vitalício à plataforma, dentro dos módulos liberados, incluindo todos os eventos ao vivo enquanto estiverem disponíveis.</p>
-        </details>
-
-        <details class="faq-item">
-          <summary>Como funciona o suporte para dúvidas?
-            <svg class="chevron" width="20" height="20"><use href="#icon-chevron"/></svg>
-          </summary>
-          <p>Suporte via WhatsApp e e-mail. Você também pode interagir com outros participantes, compartilhar experiências e obter suporte adicional na comunidade.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================================
-       Final CTA
-       ======================================================================== -->
-  <section class="final-cta">
-    <div class="container">
-      <h2>Invista agora em conhecimento</h2>
-      <p class="price-inline">12x R$ 98,24</p>
-      <div>
-        <a class="btn btn-primary btn-lg" href="https://pay.hotmart.com/W94432020C?off=xw322nuk&amp;bid=1763497678567" target="_blank" rel="noopener">
-          Quero garantir a oferta
+      <div class="co-price-box" data-reveal>
+        <span class="co-price-box__eyebrow">Formação online completa</span>
+        <p class="co-price-box__value">R$ 997</p>
+        <p class="co-price-box__note">Acesso imediato · certificado reconhecido · mentoria ao vivo inclusa.</p>
+        <!-- TODO: confirmar o link de checkout da versão VIRTUAL (R$ 997) -->
+        <a class="btn btn-primary btn-lg btn-block" href="https://pay.hotmart.com/W94432020C?off=xw322nuk&amp;bid=1763497678567" target="_blank" rel="noopener">
+          Quero me tornar um Operador de Elite
+          <svg width="18" height="18" aria-hidden="true"><use href="#icon-arrow"/></svg>
         </a>
+        <div class="co-pay" aria-label="Formas de pagamento">
+          <span>Pix</span><span>Boleto</span><span>Visa</span><span>Master</span><span>Elo</span><span>Hipercard</span>
+        </div>
+        <p class="co-price-box__secure"><svg width="16" height="16"><use href="#icon-lock"/></svg> Pagamento 100% seguro</p>
       </div>
     </div>
   </section>
 
-  <!-- ========================================================================
-       Authority
-       ======================================================================== -->
+  <!-- Guarantees -->
+  <section class="co-guarantees" aria-label="Garantias">
+    <div class="container">
+      <div class="co-guar-grid">
+        <div class="co-guar">
+          <span class="co-guar__icon"><svg width="26" height="26"><use href="#icon-devices"/></svg></span>
+          <h3>Acesso 24 horas</h3>
+          <p>Assista quando e onde quiser: celular, tablet ou computador.</p>
+        </div>
+        <div class="co-guar">
+          <span class="co-guar__icon"><svg width="26" height="26"><use href="#icon-award"/></svg></span>
+          <h3>Certificado reconhecido</h3>
+          <p>Comprove seu conhecimento e se destaque com um certificado válido.</p>
+        </div>
+        <div class="co-guar">
+          <span class="co-guar__icon"><svg width="26" height="26"><use href="#icon-shield"/></svg></span>
+          <h3>7 dias de garantia</h3>
+          <p>Se não ficar satisfeito, devolvemos 100% do seu dinheiro, sem perguntas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Authority -->
   <section class="authority" aria-labelledby="authority-heading">
     <div class="container">
       <div class="authority-card" data-reveal>
@@ -413,12 +358,12 @@
         </div>
         <div>
           <span class="authority-eyebrow">Apresentado por</span>
-          <h2 id="authority-heading">Eduardo Santos, fundador do movimento Chega de Apertador de Botão</h2>
+          <h2 id="authority-heading">Eduardo Santos, fundador da Qi em Construção</h2>
           <p>
-            Sou Eduardo Santos, fundador da Qi em Construção. Tenho mais de 25 anos de experiência nas áreas de
-            planejamento, projetos e construções, sendo que os últimos 11 anos foram dedicados a perfurações,
-            cortes e demolição controlada, estruturas de todos os tipos. Colecionando obras de grande importância
-            para a infraestrutura do país.
+            Tenho mais de 25 anos de experiência em planejamento, projetos e construções, sendo os
+            últimos 11 dedicados a perfurações, cortes e demolição controlada — em obras de grande
+            importância para a infraestrutura do país. Criei esta formação para levar esse
+            conhecimento, na prática, a quem quer crescer no mercado.
           </p>
           <ul class="authority-badges">
             <li>25+ anos de experiência</li>
@@ -426,8 +371,8 @@
             <li>Fundador · Qi em Construção</li>
           </ul>
           <div class="authority-actions">
-            <a class="btn btn-primary" href="https://pay.hotmart.com/W94432020C?off=xw322nuk&amp;bid=1763497678567" target="_blank" rel="noopener">Quero garantir a oferta</a>
-            <a class="btn btn-whatsapp" href="https://wa.me/5511947504241?text=Ol%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20o%20curso%20Operadores%20de%20Elite" target="_blank" rel="noopener">
+            <a class="btn btn-primary" href="#preco">Quero me matricular</a>
+            <a class="btn btn-whatsapp" href="https://wa.me/5511947504241?text=Ol%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20a%20forma%C3%A7%C3%A3o%20Operadores%20de%20Elite" target="_blank" rel="noopener">
               <svg width="18" height="18"><use href="#icon-whatsapp"/></svg>
               Falar no WhatsApp
             </a>
@@ -439,44 +384,34 @@
 
 </main>
 
-<!-- ==========================================================================
-     Footer
-     ========================================================================== -->
+<!-- Footer -->
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-logos">
-      <span class="award-badge"><svg width="16" height="16"><use href="#icon-award"/></svg> Melhor Perfuratriz 2025</span>
-      <span class="award-badge"><svg width="16" height="16"><use href="#icon-award"/></svg> Reconhecimento do setor</span>
+    <div class="footer-bottom">
       <span class="brand" style="font-size:1.1rem;">
-        <span class="brand-mark" aria-hidden="true" style="width:32px;height:32px;font-size:0.85rem;">OE</span>
+        <span class="brand-mark" aria-hidden="true" style="width:32px;height:32px;font-size:0.75rem;">OE</span>
         Operadores de Elite
       </span>
-    </div>
-    <div class="footer-bottom">
       <p class="footer-legal">
-        Todos os direitos reservados © Qi em Construção. Este material é educacional e não garante resultados
-        financeiros — os resultados dependem do esforço individual de cada aluno.
+        © 2026 Qi em Construção · Todos os direitos reservados. Este material é educacional e não
+        garante resultados financeiros — os resultados dependem do esforço individual de cada aluno.
       </p>
-      <div class="footer-social">
-        <a href="#" aria-label="Instagram" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#icon-instagram"/></svg></a>
-        <a href="#" aria-label="YouTube" target="_blank" rel="noopener"><svg width="18" height="18"><use href="#icon-youtube"/></svg></a>
-      </div>
     </div>
   </div>
 </footer>
 
 <!-- Floating WhatsApp -->
-<a class="whatsapp-fab" href="https://wa.me/5511947504241?text=Ol%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20o%20curso%20Operadores%20de%20Elite" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+<a class="whatsapp-fab" href="https://wa.me/5511947504241?text=Ol%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20a%20forma%C3%A7%C3%A3o%20Operadores%20de%20Elite" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg width="28" height="28"><use href="#icon-whatsapp"/></svg>
 </a>
 
 <!-- Mobile sticky CTA -->
 <div class="mobile-cta">
   <div class="mobile-cta__price">
-    <span>Por apenas</span>
-    <strong>12x R$98,24</strong>
+    <span>Formação online</span>
+    <strong>R$ 997</strong>
   </div>
-  <a class="btn btn-primary" href="https://pay.hotmart.com/W94432020C?off=xw322nuk&amp;bid=1763497678567" target="_blank" rel="noopener">Garantir oferta</a>
+  <a class="btn btn-primary" href="#preco">Matricular</a>
 </div>
 
 <script src="../js/script.js"></script>
