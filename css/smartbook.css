@@ -18,9 +18,6 @@
   gap: var(--space-6);
   align-items: center;
 }
-@media (min-width: 960px) {
-  .sb-hero__grid { grid-template-columns: 1.05fr 0.95fr; }
-}
 .sb-hero h1 {
   font-size: clamp(2.2rem, 5vw, 3.6rem);
   color: #fff;
@@ -81,42 +78,33 @@
 }
 .sb-hero .btn-ghost { color: var(--text-on-dark); }
 
-/* Hero media / mockup placeholder */
-.sb-hero__media { display: flex; justify-content: center; }
-.sb-mock {
+/* Hero media (below 1100px: image sits below the text) */
+.sb-hero__media { display: flex; justify-content: center; align-items: center; }
+.sb-hero__img {
   width: 100%;
-  max-width: 420px;
-  aspect-ratio: 4 / 3;
+  max-width: 620px;
+  height: auto;
   border-radius: var(--radius-lg);
-  border: 1px dashed rgba(245, 165, 36, 0.5);
-  background:
-    radial-gradient(80% 80% at 50% 0%, rgba(245, 165, 36, 0.12), transparent 60%),
-    linear-gradient(160deg, var(--bg-panel-2), var(--bg-deep));
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 0.4rem;
-  padding: var(--space-5);
-  color: var(--gold);
+  box-shadow: var(--shadow-lg);
 }
-.sb-mock__title {
-  font-family: var(--font-display);
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  color: #fff;
-  margin-top: 0.4rem;
-}
-.sb-mock__sub { color: var(--text-muted-on-dark); font-size: 0.85rem; max-width: 20rem; }
-.sb-mock__note {
-  margin-top: 0.6rem;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold);
-  opacity: 0.8;
+
+/* Wide desktop: use the mockup as a full-bleed hero background, text on the left */
+@media (min-width: 1100px) {
+  .sb-hero {
+    position: relative;
+    background:
+      linear-gradient(90deg,
+        var(--bg-deep) 0%,
+        rgba(20, 23, 27, 0.96) 38%,
+        rgba(20, 23, 27, 0.6) 60%,
+        rgba(20, 23, 27, 0.12) 82%,
+        rgba(20, 23, 27, 0) 100%),
+      url("../assets/img/smartbook-hero.webp") right center / cover no-repeat,
+      var(--bg-deep);
+  }
+  .sb-hero__grid { grid-template-columns: minmax(0, 600px); }
+  .sb-hero__media { display: none; }
+  .sb-hero__copy { text-shadow: 0 1px 14px rgba(0, 0, 0, 0.55); }
 }
 
 /* ---- Feature badges ---- */
