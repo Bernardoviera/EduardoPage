@@ -113,12 +113,11 @@
   border-bottom: 1px solid var(--border-light);
 }
 .sb-badges {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4) var(--space-3);
 }
-@media (min-width: 640px) { .sb-badges { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 960px) { .sb-badges { grid-template-columns: repeat(6, 1fr); } }
 .sb-badges li {
   display: flex;
   flex-direction: column;
@@ -128,6 +127,7 @@
   font-weight: 600;
   font-size: 0.9rem;
   color: var(--text-on-light);
+  flex: 0 1 128px;
 }
 .sb-badge__i {
   width: 52px; height: 52px;
