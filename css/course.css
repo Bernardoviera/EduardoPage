@@ -271,6 +271,7 @@ body.theme-presencial .co-discount__badge { background: #F5A524; color: #14171B;
   background: var(--surface-card); border: 1px solid var(--border-light);
   border-radius: var(--radius-lg); padding: var(--space-4);
   text-align: center;
+  color: var(--text-on-light);
 }
 .me-step__icon {
   width: 52px; height: 52px; margin: 0 auto var(--space-3);
