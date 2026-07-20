@@ -2,13 +2,13 @@
    Link Stream (home / hub) — Industrial Amber identity
    ========================================================================== */
 :root {
-  --bg-deep: #14171B;
-  --bg-panel: #1A1E23;
-  --bg-panel-2: #232830;
+  --bg-deep: #0B1830;
+  --bg-panel: #11213D;
+  --bg-panel-2: #172A4C;
   --primary: #17A24A;
   --primary-hover: #14893E;
-  --gold: #F5A524;
-  --gold-deep: #C2410C;
+  --gold: #F4711C;
+  --gold-deep: #C2540E;
   --text-on-dark: #F4F8F6;
   --text-muted-on-dark: #9FB3AA;
   --border-dark: rgba(244, 248, 246, 0.10);
@@ -28,7 +28,7 @@ body {
   min-height: 100dvh;
   color: var(--text-on-dark);
   background:
-    radial-gradient(120% 80% at 50% -5%, rgba(245, 165, 36, 0.16), transparent 55%),
+    radial-gradient(120% 80% at 50% -5%, rgba(244, 113, 28, 0.16), transparent 55%),
     radial-gradient(90% 60% at 50% 110%, rgba(23, 162, 74, 0.10), transparent 60%),
     linear-gradient(180deg, var(--bg-deep), #0F1215);
   -webkit-font-smoothing: antialiased;
@@ -121,7 +121,7 @@ a:focus-visible {
 }
 .ls-link:hover {
   transform: translateY(-2px);
-  border-color: rgba(245, 165, 36, 0.5);
+  border-color: rgba(244, 113, 28, 0.5);
   background: var(--bg-panel-2);
 }
 .ls-link__icon {
@@ -129,7 +129,7 @@ a:focus-visible {
   width: 46px; height: 46px;
   border-radius: 11px;
   display: flex; align-items: center; justify-content: center;
-  background: rgba(245, 165, 36, 0.14);
+  background: rgba(244, 113, 28, 0.14);
   color: var(--gold);
 }
 .ls-link__body { flex: 1; min-width: 0; }
@@ -166,8 +166,8 @@ a:focus-visible {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--gold);
-  background: rgba(245, 165, 36, 0.14);
-  border: 1px solid rgba(245, 165, 36, 0.35);
+  background: rgba(244, 113, 28, 0.14);
+  border: 1px solid rgba(244, 113, 28, 0.35);
   padding: 0.12rem 0.5rem;
   border-radius: var(--radius-pill);
 }
@@ -188,7 +188,7 @@ a:focus-visible {
 }
 .ls-social a:hover {
   color: var(--gold);
-  border-color: rgba(245, 165, 36, 0.5);
+  border-color: rgba(244, 113, 28, 0.5);
   transform: translateY(-2px);
 }
 
@@ -209,7 +209,7 @@ a:focus-visible {
 .ls-foot__mark {
   width: 30px; height: 30px;
   border-radius: 7px;
-  background: linear-gradient(150deg, #2A313A, #14171B);
+  background: linear-gradient(150deg, #1D3660, #0B1830);
   border: 1px solid rgba(255,255,255,0.12);
   display: flex; align-items: center; justify-content: center;
   font-size: 0.72rem; font-weight: 800; color: #fff;

@@ -3,9 +3,9 @@
    ========================================================================== */
 :root {
   /* Color: dark industrial base (graphite / steel) */
-  --bg-deep: #14171B;
-  --bg-panel: #1A1E23;
-  --bg-panel-2: #232830;
+  --bg-deep: #0B1830;
+  --bg-panel: #11213D;
+  --bg-panel-2: #172A4C;
   --surface-light: #F5F6F7;
   --surface-card: #FFFFFF;
 
@@ -15,8 +15,8 @@
   --primary-light: #22C55E;
 
   /* Color: price / urgency — safety amber */
-  --gold: #F5A524;
-  --gold-deep: #C2410C;
+  --gold: #F4711C;
+  --gold-deep: #C2540E;
 
   /* Color: text */
   --text-on-dark: #F4F8F6;
@@ -54,7 +54,7 @@
   --shadow-sm: 0 1px 2px rgba(6, 15, 11, 0.08);
   --shadow-md: 0 8px 24px rgba(6, 15, 11, 0.14);
   --shadow-lg: 0 20px 48px rgba(6, 15, 11, 0.22);
-  --shadow-gold: 0 12px 30px rgba(245, 165, 36, 0.28);
+  --shadow-gold: 0 12px 30px rgba(244, 113, 28, 0.28);
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -204,7 +204,7 @@ input:focus-visible {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(20, 23, 27, 0.90);
+  background: rgba(11, 24, 48, 0.90);
   backdrop-filter: blur(12px) saturate(1.1);
   border-top: 3px solid var(--gold);
   border-bottom: 1px solid var(--border-dark);
@@ -228,7 +228,7 @@ input:focus-visible {
   position: relative;
   width: 46px; height: 46px;
   border-radius: 9px;
-  background: linear-gradient(150deg, #2A313A, #14171B);
+  background: linear-gradient(150deg, #1D3660, #0B1830);
   border: 1px solid rgba(255, 255, 255, 0.12);
   display: flex; align-items: center; justify-content: center;
   color: #fff;
@@ -399,7 +399,7 @@ input:focus-visible {
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-dark);
   aspect-ratio: 4 / 5;
-  background: linear-gradient(160deg, #232830, #14171B);
+  background: linear-gradient(160deg, #172A4C, #0B1830);
 }
 .video-card__label {
   position: absolute;
@@ -508,7 +508,7 @@ input:focus-visible {
   .module-grid { grid-template-columns: repeat(4, 1fr); }
 }
 .module-card {
-  background: #1A1E23;
+  background: #11213D;
   border: 1px solid var(--border-dark);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -517,7 +517,7 @@ input:focus-visible {
 .module-card:hover { transform: translateY(-4px); border-color: rgba(34,197,94,0.4); }
 .module-card__thumb {
   aspect-ratio: 16/10;
-  background: linear-gradient(150deg, #2A313A, #14171B);
+  background: linear-gradient(150deg, #1D3660, #0B1830);
   overflow: hidden;
 }
 .module-card__thumb img {
@@ -594,7 +594,7 @@ input:focus-visible {
 }
 
 .stat-panel {
-  background: linear-gradient(165deg, #1A1E23, #14171B);
+  background: linear-gradient(165deg, #11213D, #0B1830);
   border-radius: var(--radius-lg);
   padding: var(--space-5);
   color: var(--text-on-dark);
@@ -630,8 +630,8 @@ input:focus-visible {
    ========================================================================== */
 .offer {
   background:
-    radial-gradient(90% 60% at 50% 0%, rgba(234, 179, 8, 0.10), transparent 60%),
-    linear-gradient(180deg, #14171B, #1A1E23 40%, #14171B);
+    radial-gradient(90% 60% at 50% 0%, rgba(244, 113, 28, 0.10), transparent 60%),
+    linear-gradient(180deg, #0B1830, #11213D 40%, #0B1830);
   color: var(--text-on-dark);
 }
 .offer-stack {
@@ -746,7 +746,7 @@ input:focus-visible {
   margin-top: var(--space-4);
   background: #12201A;
 }
-.price-box .btn-primary:hover { background: #14171B; }
+.price-box .btn-primary:hover { background: #0B1830; }
 
 /* ==========================================================================
    Testimonials
@@ -765,7 +765,7 @@ input:focus-visible {
   overflow: hidden;
   position: relative;
   aspect-ratio: 9 / 16;
-  background: linear-gradient(160deg, #232830, #14171B);
+  background: linear-gradient(160deg, #172A4C, #0B1830);
   box-shadow: var(--shadow-md);
 }
 .testimonial-facade {
@@ -875,14 +875,14 @@ input:focus-visible {
   font-weight: 800;
   font-size: clamp(1.8rem, 4vw, 2.4rem);
   color: var(--gold);
-  background: #14171B;
+  background: #0B1830;
   display: inline-block;
   padding: 0.6rem 1.4rem;
   border-radius: var(--radius-pill);
   margin-top: var(--space-4);
 }
 .final-cta .btn { margin-top: var(--space-5); }
-.final-cta .btn-primary { background: #14171B; color: #fff; }
+.final-cta .btn-primary { background: #0B1830; color: #fff; }
 .final-cta .btn-primary:hover { background: #000; }
 
 /* ==========================================================================
@@ -906,7 +906,7 @@ input:focus-visible {
   aspect-ratio: 4 / 5;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: linear-gradient(160deg, #2A313A, #14171B);
+  background: linear-gradient(160deg, #1D3660, #0B1830);
 }
 .authority-photo img {
   width: 100%;
