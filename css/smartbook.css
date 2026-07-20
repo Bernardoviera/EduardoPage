@@ -477,3 +477,50 @@
   font-size: 0.95rem;
 }
 .sb-footer .footer-bottom { margin-top: var(--space-6); }
+
+/* ==========================================================================
+   SmartBook v2 — final material additions
+   ========================================================================== */
+
+/* Dark variant of the badges strip */
+.sb-badges-sec--dark { background: linear-gradient(180deg, var(--bg-panel), var(--bg-deep)); border-bottom: none; }
+.sb-badges-sec--dark .sb-badges li { color: var(--text-on-dark); }
+.sb-badges-sec--dark .sb-badge__i { background: rgba(245,165,36,0.16); color: var(--gold); }
+
+/* Video + transformation copy */
+.sm-video { background: var(--surface-light); }
+.sm-video__grid { display: grid; gap: var(--space-6); align-items: center; }
+@media (min-width: 900px) { .sm-video__grid { grid-template-columns: 1fr 1fr; } }
+.video-card--wide { aspect-ratio: 4 / 3; }
+.sm-video__copy h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); }
+.sm-video__list { margin-top: var(--space-4); display: grid; gap: 0.65rem; }
+.sm-video__list li { display: flex; gap: 0.55rem; align-items: flex-start; font-size: 1rem; font-weight: 500; }
+.sm-video__list li svg { color: var(--gold-deep); flex-shrink: 0; margin-top: 3px; }
+.sm-video__copy .btn { margin-top: var(--space-5); }
+
+/* Real-practice photo grid */
+.sm-photos { display: grid; gap: var(--space-3); grid-template-columns: repeat(2, 1fr); margin-top: var(--space-5); }
+@media (min-width: 720px) { .sm-photos { grid-template-columns: repeat(4, 1fr); } }
+.sm-photos img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: var(--radius-md); display: block; }
+
+/* Pricing tiers */
+.sm-tiers { display: grid; gap: var(--space-4); max-width: 920px; margin-inline: auto; }
+@media (min-width: 760px) { .sm-tiers { grid-template-columns: repeat(3, 1fr); } }
+.sm-tier {
+  background: var(--surface-card); color: var(--text-on-light);
+  border: 1px solid var(--border-light); border-radius: var(--radius-lg);
+  padding: var(--space-5); text-align: center;
+}
+.sm-tier__label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); }
+.sm-tier__value { font-family: var(--font-display); font-weight: 800; font-size: 2.3rem; line-height: 1; margin: 0.5rem 0; }
+.sm-tier__value small { font-size: 1.05rem; }
+.sm-tier__desc { color: var(--text-muted-on-light); font-size: 0.92rem; }
+.sm-tier--main { border-top: 5px solid var(--gold); box-shadow: var(--shadow-lg); }
+.sm-tier--contact { border-color: rgba(23,162,74,0.4); }
+.sm-price-cta { margin-top: var(--space-6); display: flex; flex-direction: column; align-items: center; gap: var(--space-3); }
+.sm-price-cta__note { color: var(--text-muted-on-dark); font-size: 0.85rem; letter-spacing: 0.03em; text-align: center; }
+
+/* Footer trust strip */
+.sm-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-5); margin-top: var(--space-4); }
+.sm-trust li { display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted-on-dark); font-size: 0.85rem; font-weight: 600; }
+.sm-trust li svg { color: var(--gold); flex-shrink: 0; }
