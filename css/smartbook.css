@@ -6,12 +6,15 @@
 
 /* ---- Hero ---- */
 .sb-hero {
-  background:
-    radial-gradient(120% 100% at 100% 0%, rgba(244, 113, 28, 0.18), transparent 55%),
-    linear-gradient(180deg, var(--bg-deep), var(--bg-panel));
+  background-image: url('../assets/img/smartbook-hero.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--bg-deep);
   color: var(--text-on-dark);
   padding-top: var(--space-7);
   overflow: hidden;
+  min-height: 550px;
 }
 .sb-hero__grid {
   display: grid;
