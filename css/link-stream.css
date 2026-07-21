@@ -330,6 +330,16 @@ a:focus-visible, button:focus-visible {
   border-color: rgba(244, 113, 28, 0.5);
   transform: translateY(-2px);
 }
+.ls-social__ig:hover {
+  color: #fff;
+  border-color: transparent;
+  background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.ls-social__yt:hover {
+  color: #fff;
+  border-color: transparent;
+  background: #FF0000;
+}
 
 .ls-bottom {
   width: 100%;
