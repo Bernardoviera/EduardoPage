@@ -197,7 +197,7 @@ a:focus-visible, button:focus-visible {
   background: linear-gradient(160deg, var(--bg-panel-2), var(--bg-deep));
   position: relative;
 }
-.ls-card__media img { width: 100%; height: 100%; object-fit: cover; }
+.ls-card__media img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
 .ls-card__media--placeholder {
   display: flex; align-items: center; justify-content: center;
   color: var(--c);
@@ -271,7 +271,7 @@ a:focus-visible, button:focus-visible {
 
 @media (max-width: 480px) {
   .ls-card { flex-direction: column; }
-  .ls-card__media { width: 100%; aspect-ratio: 16/9; }
+  .ls-card__media { width: 100%; aspect-ratio: 21/9; max-height: 150px; }
   .ls-card__body { padding-right: 0; }
   .ls-card__arrow { top: 0.6rem; right: 0.6rem; }
 }
