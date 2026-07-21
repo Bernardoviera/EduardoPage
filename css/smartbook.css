@@ -7,7 +7,7 @@
 /* ---- Hero ---- */
 .sb-hero {
   background-image: url('../assets/img/smartbook-hero.png');
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--bg-deep);
@@ -15,7 +15,7 @@
   overflow: hidden;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  min-height: 600px;
+  min-height: 700px;
 }
 .sb-hero__grid {
   display: grid;
