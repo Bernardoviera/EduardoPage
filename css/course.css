@@ -314,3 +314,126 @@
 .me-cta-box__eyebrow { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold-deep); }
 .me-cta-box h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); margin: 0.4rem 0 var(--space-3); }
 .me-cta-box p { color: var(--text-muted-on-light); margin-bottom: var(--space-4); }
+
+/* ==========================================================================
+   Operadores de Elite (virtual) — v2 rebuild to match final mockup
+   ========================================================================== */
+
+/* Hero "curso online" tag */
+.oe-online-tag {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  margin-top: var(--space-4);
+  color: var(--primary-light); font-weight: 700; font-size: 0.95rem;
+}
+
+/* Results: 4-up grid + non-numeric 4th stat */
+.co-results__grid--4 { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 760px) { .co-results__grid--4 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1040px) { .co-results__grid--4 { grid-template-columns: repeat(4, 1fr); } }
+.co-stat__label--lead { margin-top: var(--space-3); font-weight: 700; color: #fff; font-size: 1.05rem; }
+
+/* "O que você recebe": checklist + offer box (left) / video grid (right) */
+.oe-receive__grid { display: grid; gap: var(--space-6); align-items: start; }
+@media (min-width: 940px) { .oe-receive__grid { grid-template-columns: 1.1fr 0.9fr; } }
+
+.oe-offer {
+  display: flex; gap: var(--space-4); align-items: center;
+  margin-top: var(--space-5);
+  background: var(--surface-card);
+  border: 1px solid rgba(244, 113, 28, 0.4);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+}
+.oe-offer__photo {
+  flex-shrink: 0;
+  width: 84px; height: 84px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(160deg, #1D3660, #0B1830);
+}
+.oe-offer__photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.oe-offer__tag {
+  display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--gold-deep); background: rgba(244, 113, 28, 0.14);
+  padding: 0.2rem 0.6rem; border-radius: var(--radius-pill); margin-bottom: 0.3rem;
+}
+.oe-offer h3 { font-size: 1.1rem; color: var(--text-on-light); }
+.oe-offer p { color: var(--text-muted-on-light); font-size: 0.88rem; margin-top: 0.25rem; }
+
+.oe-video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+.oe-video-grid__main { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
+.oe-video-grid__sm { aspect-ratio: 4 / 3; }
+.play-btn--sm { width: 52px; height: 52px; }
+
+/* Curriculum: modules with connecting arrows */
+.oe-curriculum {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: var(--space-3);
+}
+.oe-curriculum__item { width: 180px; text-align: center; }
+.oe-curriculum__imgwrap {
+  position: relative; border-radius: var(--radius-lg); overflow: hidden;
+  aspect-ratio: 1; box-shadow: var(--shadow-md);
+}
+.oe-curriculum__imgwrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.oe-curriculum__tag {
+  display: inline-block; margin-top: var(--space-3);
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: #0B1830; background: var(--gold); padding: 0.2rem 0.7rem; border-radius: var(--radius-pill);
+}
+.oe-curriculum__title { margin-top: 0.4rem; color: #fff; font-weight: 700; font-size: 0.95rem; }
+.oe-curriculum__arrow { color: var(--gold); flex-shrink: 0; display: none; }
+@media (min-width: 900px) { .oe-curriculum__arrow { display: block; } }
+
+/* Bonus + price banner */
+.oe-bonus2 {
+  background: linear-gradient(180deg, var(--bg-panel), var(--bg-deep));
+  color: var(--text-on-dark);
+}
+.oe-bonus2__banner {
+  text-align: center; color: #fff; font-weight: 800;
+  font-size: clamp(1.1rem, 2.6vw, 1.5rem);
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold));
+  padding: var(--space-4);
+  margin: 0 0 var(--space-6);
+}
+.oe-bonus2__banner span { text-transform: uppercase; }
+.oe-bonus2__grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+@media (min-width: 640px) { .oe-bonus2__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .oe-bonus2__grid { grid-template-columns: repeat(4, 1fr); } }
+.oe-bonus2__item {
+  background: var(--bg-panel-2); border: 1px solid var(--border-dark); border-radius: var(--radius-lg);
+  padding: var(--space-4); text-align: center;
+}
+.oe-bonus2__i {
+  width: 48px; height: 48px; margin: 0 auto var(--space-3);
+  border-radius: 13px; display: flex; align-items: center; justify-content: center;
+  background: rgba(244, 113, 28, 0.16); color: var(--gold);
+}
+.oe-bonus2__name { font-weight: 600; font-size: 0.9rem; }
+.oe-bonus2__price { margin-top: 0.4rem; color: var(--gold); font-weight: 800; font-family: var(--font-display); }
+.oe-bonus2__price-box { text-align: center; margin-top: var(--space-6); }
+.oe-bonus2__from { color: var(--text-muted-on-dark); font-size: 0.95rem; }
+.oe-bonus2__value { margin-top: 0.3rem; font-family: var(--font-display); font-weight: 800; font-size: clamp(1.6rem, 4vw, 2.2rem); color: #fff; }
+.oe-bonus2__value strong { color: var(--gold); }
+.oe-bonus2__value span { display: block; margin-top: 0.3rem; font-family: var(--font-sans, inherit); font-weight: 500; font-size: 0.95rem; color: var(--text-muted-on-dark); }
+.oe-bonus2__cta { margin-top: var(--space-6); flex-direction: column; gap: 0.15rem; line-height: 1.3; }
+.oe-bonus2__cta small { font-weight: 500; font-size: 0.75rem; color: #E8FFF1; text-transform: none; }
+
+/* Quote-style testimonials */
+.oe-quote-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+@media (min-width: 760px) { .oe-quote-grid { grid-template-columns: repeat(3, 1fr); } }
+.oe-quote {
+  background: var(--surface-card); border: 1px solid var(--border-light); border-radius: var(--radius-lg);
+  padding: var(--space-4); box-shadow: var(--shadow-sm);
+}
+.oe-quote__head { display: flex; align-items: center; gap: 0.7rem; margin-bottom: var(--space-3); }
+.oe-quote__avatar {
+  flex-shrink: 0; width: 46px; height: 46px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(23,162,74,0.14); color: var(--primary);
+  font-family: var(--font-display); font-weight: 800; font-size: 0.9rem;
+}
+.oe-quote__head strong { display: block; color: var(--text-on-light); font-size: 0.95rem; }
+.oe-quote__stars { color: var(--gold); display: inline-flex; gap: 1px; margin-top: 0.15rem; }
+.oe-quote p { color: var(--text-muted-on-light); font-size: 0.92rem; font-style: italic; }
