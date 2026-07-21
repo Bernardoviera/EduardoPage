@@ -16,6 +16,16 @@
 }
 .co-hero__grid { display: grid; gap: var(--space-6); align-items: center; }
 @media (min-width: 940px) { .co-hero__grid { grid-template-columns: 1.05fr 0.95fr; } }
+
+/* Hero as a single full-bleed image (no text overlay — content is baked into the image) */
+.co-hero--img {
+  background: var(--bg-deep);
+  padding-top: 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  line-height: 0;
+}
+.co-hero__img { display: block; width: 100%; height: auto; }
 .co-hero h1 { font-size: clamp(2.1rem, 4.8vw, 3.4rem); color: #fff; }
 .co-lede {
   margin-top: var(--space-4);
@@ -180,6 +190,15 @@
   display: flex; align-items: center; justify-content: center;
   background: var(--bg-panel); border: 1px solid rgba(244, 113, 28,0.4);
   color: var(--gold); font-family: var(--font-display); font-weight: 800;
+}
+
+/* Modalidades as ready-made image cards */
+.co-modality--img { align-items: center; }
+.co-mod__img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  display: block;
 }
 
 /* ---- Discount strip ---- */
