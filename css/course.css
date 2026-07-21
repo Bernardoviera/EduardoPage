@@ -20,7 +20,7 @@
 /* Hero as a single full-bleed image (no text overlay — content is baked into the image) */
 .co-hero--img {
   background: var(--bg-deep);
-  padding-top: 0;
+  padding-block: 0;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   line-height: 0;
