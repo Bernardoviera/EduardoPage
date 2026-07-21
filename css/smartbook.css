@@ -7,14 +7,15 @@
 /* ---- Hero ---- */
 .sb-hero {
   background-image: url('../assets/img/smartbook-hero.png');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: var(--bg-deep);
   color: var(--text-on-dark);
-  padding-top: var(--space-7);
   overflow: hidden;
-  min-height: 550px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  min-height: 600px;
 }
 .sb-hero__grid {
   display: grid;
