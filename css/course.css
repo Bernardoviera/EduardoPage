@@ -194,11 +194,26 @@
 
 /* Modalidades as ready-made image cards */
 .co-modality--img { align-items: center; }
+.co-mod__imgwrap { position: relative; }
 .co-mod__img {
   width: 100%;
   height: auto;
   border-radius: var(--radius-lg);
   display: block;
+}
+.co-mod__tag {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--gold-deep, #F4711C);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ---- Discount strip ---- */
