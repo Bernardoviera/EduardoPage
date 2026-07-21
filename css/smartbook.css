@@ -511,3 +511,33 @@
 .sm-trust { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-5); margin-top: var(--space-4); }
 .sm-trust li { display: flex; align-items: center; gap: 0.5rem; color: var(--text-muted-on-dark); font-size: 0.85rem; font-weight: 600; }
 .sm-trust li svg { color: var(--gold); flex-shrink: 0; }
+
+/* Why-different + YouTube: side-by-side pair */
+.sb-why-grid { display: grid; gap: var(--space-5); align-items: stretch; }
+@media (min-width: 900px) { .sb-why-grid { grid-template-columns: 1fr 1fr; } }
+.sb-why-grid .authority-card--compact { height: 100%; }
+.sb-why-grid .co-bonus__card--compact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  background: linear-gradient(160deg, var(--bg-panel-2), var(--bg-deep));
+  color: var(--text-on-dark);
+  border: 1px solid var(--border-dark);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  text-align: left;
+}
+
+/* Round author photo (used inside the why-different card) */
+.authority-photo--round {
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 50%;
+  margin-inline: auto;
+}
+@media (min-width: 800px) {
+  .sb-why-grid .authority-card--compact { grid-template-columns: 200px 1fr; }
+}
