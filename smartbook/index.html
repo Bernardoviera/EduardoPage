@@ -76,15 +76,14 @@
        ======================================================================== -->
   <section class="sm-video" aria-labelledby="video-heading">
     <div class="container sm-video__grid">
-      <!-- TODO: substituir pelo vídeo real (2:45) quando o link/arquivo for enviado -->
-      <div class="video-card video-card--wide" role="group" aria-label="Vídeo de apresentação do SmartBook (em produção)">
+      <button class="video-card video-card--wide js-yt-facade" type="button" data-yt="Co3U6aF3UP8" aria-label="Reproduzir vídeo de apresentação do SmartBook">
         <div class="video-card__label">
           <p class="video-card__badge">Veja o SmartBook<span>em ação</span></p>
-          <button class="play-btn" type="button" aria-label="Reproduzir vídeo de apresentação">
+          <span class="play-btn" aria-hidden="true">
             <svg width="28" height="28"><use href="#icon-play"/></svg>
-          </button>
+          </span>
         </div>
-      </div>
+      </button>
       <div class="sm-video__copy">
         <div class="section-head sb-colhead">
           <span class="section-kicker">Transforme sua forma de trabalhar</span>
@@ -281,5 +280,6 @@
   <a class="btn btn-primary" href="#preco">Garantir SmartBook</a>
 </div>
 
+<script src="../js/script.js"></script>
 </body>
 </html>

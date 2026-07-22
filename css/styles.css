@@ -394,6 +394,10 @@ input:focus-visible {
 /* Video card */
 .video-card {
   position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  text-align: left;
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
@@ -401,6 +405,8 @@ input:focus-visible {
   aspect-ratio: 4 / 5;
   background: linear-gradient(160deg, #172A4C, #0B1830);
 }
+button.video-card { cursor: pointer; }
+iframe.video-card { border: 0; }
 .video-card__label {
   position: absolute;
   inset: 0;

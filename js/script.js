@@ -25,30 +25,30 @@
     });
   }
 
-  // Testimonials: load the YouTube player only when the visitor clicks
+  // Video facades: load the YouTube player only when the visitor clicks
   // (keeps the page light — no embeds run until requested).
-  var facades = document.querySelectorAll(".testimonial-facade");
-  facades.forEach(function (facade) {
+  function wireYoutubeFacade(facade) {
     facade.addEventListener("click", function () {
       var id = facade.getAttribute("data-yt");
       if (!id) return;
       var iframe = document.createElement("iframe");
+      iframe.className = facade.className.replace("js-yt-facade", "").trim();
       iframe.setAttribute(
         "src",
         "https://www.youtube-nocookie.com/embed/" + id +
           "?autoplay=1&rel=0&modestbranding=1&playsinline=1"
       );
-      iframe.setAttribute("title", facade.getAttribute("aria-label") || "Depoimento em vídeo");
+      iframe.setAttribute("title", facade.getAttribute("aria-label") || "Vídeo");
       iframe.setAttribute(
         "allow",
         "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       );
       iframe.setAttribute("allowfullscreen", "");
-      var card = facade.closest(".testimonial-card");
       facade.replaceWith(iframe);
-      if (card) iframe.focus();
+      iframe.focus();
     });
-  });
+  }
+  document.querySelectorAll(".testimonial-facade, .js-yt-facade").forEach(wireYoutubeFacade);
 
   // Only one FAQ item open at a time
   var faqItems = document.querySelectorAll(".faq-item");

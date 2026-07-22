@@ -327,9 +327,9 @@
 }
 
 /* Results: 4-up grid + non-numeric 4th stat */
-.co-results__grid--4 { grid-template-columns: repeat(2, 1fr); }
-@media (min-width: 760px) { .co-results__grid--4 { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1040px) { .co-results__grid--4 { grid-template-columns: repeat(4, 1fr); } }
+.co-results__grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 760px) { .co-results__grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1040px) { .co-results__grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .co-stat__label--lead { margin-top: var(--space-3); font-weight: 700; color: #fff; font-size: 1.05rem; }
 
 /* "O que você recebe": checklist + offer box (left) / video grid (right) */
