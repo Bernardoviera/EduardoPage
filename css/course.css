@@ -17,6 +17,18 @@
 .co-hero__grid { display: grid; gap: var(--space-6); align-items: center; }
 @media (min-width: 940px) { .co-hero__grid { grid-template-columns: 1.05fr 0.95fr; } }
 
+/* Operadores de Elite (virtual) hero — video first on mobile, so it's
+   fully visible without scrolling as soon as the page opens */
+@media (max-width: 899px) {
+  .oe-hero { padding-top: var(--space-5); }
+  .oe-hero__video { order: -1; }
+  .oe-hero .co-hero__copy { margin-top: var(--space-4); text-align: center; }
+  .oe-hero h1 { font-size: clamp(1.5rem, 6vw, 2rem); }
+  .oe-hero .co-lede { margin-top: 0.5rem; font-size: 0.95rem; }
+  .oe-hero .oe-online-tag { margin-top: 0.5rem; justify-content: center; }
+  .oe-hero .video-card--wide { aspect-ratio: 16 / 9; }
+}
+
 /* Hero as a single full-bleed image (no text overlay — content is baked into the image) */
 .co-hero--img {
   background: var(--bg-deep);

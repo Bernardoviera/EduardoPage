@@ -89,6 +89,14 @@ a:focus-visible, button:focus-visible {
   height: auto;
 }
 
+@media (max-width: 640px) {
+  .ls-banner {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    border-radius: 0;
+  }
+}
+
 /* ---- Product cards ---- */
 .ls-cards {
   width: 100%;
