@@ -251,6 +251,11 @@ input:focus-visible {
   border-width: 0 0 15px 15px;
   border-color: transparent transparent var(--gold) transparent;
 }
+.brand-logo-img {
+  height: 34px;
+  width: auto;
+  flex-shrink: 0;
+}
 .brand-word {
   display: flex;
   flex-direction: column;
