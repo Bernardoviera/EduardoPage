@@ -78,6 +78,7 @@ a:focus-visible, button:focus-visible {
   border: 0;
 }
 .ls-banner {
+  position: relative;
   width: 100%;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -87,6 +88,14 @@ a:focus-visible, button:focus-visible {
   display: block;
   width: 100%;
   height: auto;
+}
+.ls-banner::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 35%;
+  background: linear-gradient(180deg, transparent, var(--bg-deep));
+  pointer-events: none;
 }
 
 @media (max-width: 640px) {
