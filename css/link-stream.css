@@ -218,7 +218,7 @@ a:focus-visible, button:focus-visible {
 
 @media (max-width: 480px) {
   .ls-card { flex-direction: column; }
-  .ls-card__media { width: 100%; aspect-ratio: 21/9; max-height: 150px; }
+  .ls-card__media { width: 100%; aspect-ratio: 1 / 1; }
   .ls-card__body { padding-right: 0; }
   .ls-card__arrow { top: 0.6rem; right: 0.6rem; }
 }
