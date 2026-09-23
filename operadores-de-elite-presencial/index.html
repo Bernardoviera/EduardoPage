@@ -13,6 +13,18 @@
 <link rel="stylesheet" href="../css/course.css">
 
 <style>
+/* Hero: foto real de treinamento com texto sobreposto (substitui o banner com texto embutido na imagem) */
+.co-hero--photo { position: relative; padding-block: clamp(72px,12vw,140px) clamp(56px,8vw,96px); overflow: hidden; background: #0b1830; }
+.co-hero__bgimg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+.co-hero__scrim {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(11,24,48,.55) 0%, rgba(11,24,48,.94) 85%),
+    linear-gradient(90deg, rgba(11,24,48,.92) 0%, rgba(11,24,48,.55) 45%, rgba(11,24,48,.2) 75%);
+}
+.co-hero__photocopy { position: relative; z-index: 1; max-width: 620px; }
+.co-hero__photocopy .co-hero__points { margin-top: var(--space-4); }
+
 /* Oferta Curso Presencial: mesma linguagem visual da oferta do SmartBook. */
 #vaga.sb-offer { background: radial-gradient(ellipse at top, #19364b 0%, #0b1828 65%); padding: clamp(48px,7vw,88px) 0; color:#fff; }
 .sb-offer .section-head h2 { color:#fff; }
@@ -57,25 +69,6 @@
 .co-testi__score-stars { color: var(--gold); font-size: 1.05rem; letter-spacing: 2px; }
 .co-testi__score-desc { margin: 0; color: var(--text-muted-on-dark); font-size: 0.92rem; }
 .co-testi__score-desc strong { color: #fff; }
-.co-testi__grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
-@media (min-width: 720px) { .co-testi__grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1080px) { .co-testi__grid { grid-template-columns: repeat(3, 1fr); } }
-.co-testi__card {
-  display: flex; flex-direction: column; gap: var(--space-3);
-  background: var(--bg-panel-2); border: 1px solid var(--border-dark);
-  border-radius: var(--radius-lg); padding: var(--space-5);
-}
-.co-testi__card-stars { color: var(--gold); font-size: 0.95rem; letter-spacing: 2px; }
-.co-testi__quote { flex: 1; margin: 0; color: var(--text-on-dark); font-size: 0.95rem; line-height: 1.65; font-style: italic; }
-.co-testi__author { display: flex; align-items: center; gap: 0.7rem; margin-top: auto; }
-.co-testi__avatar {
-  flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(244,113,28,0.16); color: var(--gold);
-  font-family: var(--font-display); font-weight: 800; font-size: 0.82rem;
-}
-.co-testi__author strong { display: block; color: #fff; font-size: 0.92rem; }
-.co-testi__author span { color: var(--text-muted-on-dark); font-size: 0.8rem; }
 </style>
 </head>
 <body>
@@ -110,11 +103,10 @@
 <!-- Header -->
 <header class="site-header">
   <div class="container">
-    <a class="brand" href="../" aria-label="Qi em Construção — página inicial">
-      <span class="brand-mark" aria-hidden="true">OE</span>
+    <a class="brand brand--logo" href="../" aria-label="Qi em Construção — página inicial">
+      <img class="brand-logo-img" src="../assets/img/logo-operadores-de-elite.png" alt="Operadores de Elite">
       <span class="brand-word">
         <span class="brand-word__top">Curso presencial</span>
-        <span class="brand-word__main">Operadores de Elite</span>
       </span>
     </a>
     <div class="header-right">
@@ -133,8 +125,21 @@
 <main id="main">
 
   <!-- Hero -->
-  <section class="co-hero co-hero--img">
-    <img class="co-hero__img" src="../assets/img/presencial-hero.png" alt="Curso Presencial Operadores de Elite — Perfurações e Cortes em Concreto. Treinamento completo com teoria e prática em equipamentos reais para você dominar as técnicas e se destacar no mercado da construção civil.">
+  <section class="co-hero co-hero--photo">
+    <img class="co-hero__bgimg" src="../assets/img/presencial-hero-real.webp" alt="" aria-hidden="true">
+    <div class="co-hero__scrim" aria-hidden="true"></div>
+    <div class="container co-hero__photocopy">
+      <span class="eyebrow">Curso presencial</span>
+      <h1>Torne-se um <span class="accent">Operador de Elite</span></h1>
+      <p class="co-lede">
+        Treinamento completo com teoria e prática em <strong>equipamentos reais</strong> para você dominar as técnicas de perfuração e corte em concreto e se destacar no mercado da construção civil.
+      </p>
+      <ul class="co-hero__points">
+        <li><svg width="20" height="20"><use href="#icon-check"/></svg> Teoria e prática aplicada</li>
+        <li><svg width="20" height="20"><use href="#icon-check"/></svg> Equipamentos profissionais</li>
+        <li><svg width="20" height="20"><use href="#icon-check"/></svg> Alta demanda no mercado</li>
+      </ul>
+    </div>
   </section>
 
   <!-- Video de apresentação -->
@@ -196,15 +201,31 @@
         <span class="section-kicker">Formatos</span>
         <h2 id="mod-heading">Escolha sua modalidade de treinamento</h2>
       </div>
-      <div class="co-modality co-modality--img" data-reveal>
-        <div class="co-mod__imgwrap">
-          <span class="co-mod__tag">Modalidade 1</span>
-          <img class="co-mod__img" src="../assets/img/presencial-modalidade-1dia.png" alt="Modalidade 1: 1 dia de curso híbrido. Conteúdo teórico online antes do curso. 1 dia de prática presencial operando equipamentos reais.">
+      <div class="co-modality" data-reveal>
+        <div class="co-mod">
+          <div class="co-mod__imgwrap" style="margin-bottom:var(--space-4)">
+            <span class="co-mod__tag">Modalidade 1</span>
+            <img class="co-mod__img" src="../assets/img/curso-modulo-1-introducao.webp" alt="Alunos em treinamento prático, operando equipamento de perfuração em concreto">
+          </div>
+          <div class="co-mod__head"><h3>Modalidade 1</h3><span class="co-mod__dur">1 dia · híbrido</span></div>
+          <p class="co-mod__desc">Para quem tem pouco tempo e precisa de resultado rápido.</p>
+          <div class="co-mod__rows">
+            <div class="co-mod__row"><svg width="20" height="20"><use href="#icon-calendar"/></svg><span><strong>Online</strong>Conteúdo teórico antes do curso</span></div>
+            <div class="co-mod__row"><svg width="20" height="20"><use href="#icon-calendar"/></svg><span><strong>1 dia presencial</strong>Prática operando equipamentos reais</span></div>
+          </div>
         </div>
         <div class="co-or" aria-hidden="true"><span>OU</span></div>
-        <div class="co-mod__imgwrap">
-          <span class="co-mod__tag">Modalidade 2</span>
-          <img class="co-mod__img" src="../assets/img/presencial-modalidade-2dias.png" alt="Modalidade 2: 2 dias de treinamento completo. Imersão total no conteúdo teórico e na prática com equipamentos. Dia 1: conteúdo teórico. Dia 2: prática intensiva com equipamentos reais.">
+        <div class="co-mod">
+          <div class="co-mod__imgwrap" style="margin-bottom:var(--space-4)">
+            <span class="co-mod__tag">Modalidade 2</span>
+            <img class="co-mod__img" src="../assets/img/curso-modulo-4-inteligencia-tecnica.webp" alt="Operadores em treinamento intensivo de corte e perfuração em concreto">
+          </div>
+          <div class="co-mod__head"><h3>Modalidade 2</h3><span class="co-mod__dur">2 dias</span></div>
+          <p class="co-mod__desc">Imersão total no conteúdo teórico e na prática com equipamentos.</p>
+          <div class="co-mod__rows">
+            <div class="co-mod__row"><svg width="20" height="20"><use href="#icon-calendar"/></svg><span><strong>Dia 1</strong>Conteúdo teórico</span></div>
+            <div class="co-mod__row"><svg width="20" height="20"><use href="#icon-calendar"/></svg><span><strong>Dia 2</strong>Prática intensiva com equipamentos reais</span></div>
+          </div>
         </div>
       </div>
 
@@ -308,63 +329,16 @@
         <p class="co-testi__score-desc"><strong>+120 operadores</strong> já formados no treinamento presencial</p>
       </div>
 
-      <!-- TODO: substituir pelos depoimentos reais dos alunos (nome, foto/avatar, cidade e texto) quando enviados -->
-      <div class="co-testi__grid" data-reveal>
-        <article class="co-testi__card">
-          <span class="co-testi__card-stars" aria-label="5 de 5 estrelas">★★★★★</span>
-          <p class="co-testi__quote">"Cheguei sem nunca ter encostado numa perfuratriz e saí operando com segurança. A prática com equipamento real fez toda a diferença — na obra eu já apliquei tudo no primeiro dia."</p>
-          <div class="co-testi__author">
-            <span class="co-testi__avatar" aria-hidden="true">RM</span>
-            <div>
-              <strong>Ricardo Mendes</strong>
-              <span>Operador de perfuratriz · São Paulo/SP</span>
-            </div>
-          </div>
-        </article>
-        <article class="co-testi__card">
-          <span class="co-testi__card-stars" aria-label="5 de 5 estrelas">★★★★★</span>
-          <p class="co-testi__quote">"Mandei minha equipe inteira fazer o curso. Depois disso caiu muito o número de retrabalho e quase zeramos os acidentes com equipamento na obra. Valeu cada centavo."</p>
-          <div class="co-testi__author">
-            <span class="co-testi__avatar" aria-hidden="true">JF</span>
-            <div>
-              <strong>Juliana Ferreira</strong>
-              <span>Encarregada de obra · Rio de Janeiro/RJ</span>
-            </div>
-          </div>
-        </article>
-        <article class="co-testi__card">
-          <span class="co-testi__card-stars" aria-label="5 de 5 estrelas">★★★★★</span>
-          <p class="co-testi__quote">"O Eduardo ensina do jeito que precisa ser: na prática, sem enrolação. Três meses depois do curso já estava fechando serviços de corte e perfuração por conta própria."</p>
-          <div class="co-testi__author">
-            <span class="co-testi__avatar" aria-hidden="true">MV</span>
-            <div>
-              <strong>Marcos Vinícius</strong>
-              <span>Operador autônomo · Belo Horizonte/MG</span>
-            </div>
-          </div>
-        </article>
-        <article class="co-testi__card">
-          <span class="co-testi__card-stars" aria-label="5 de 5 estrelas">★★★★★</span>
-          <p class="co-testi__quote">"Turma pequena, atenção total do instrutor e equipamento profissional de verdade — não é aquele curso genérico. Voltei pra empresa com muito mais confiança no equipamento."</p>
-          <div class="co-testi__author">
-            <span class="co-testi__avatar" aria-hidden="true">AC</span>
-            <div>
-              <strong>Anderson Costa</strong>
-              <span>Técnico de manutenção · Curitiba/PR</span>
-            </div>
-          </div>
-        </article>
-        <article class="co-testi__card">
-          <span class="co-testi__card-stars" aria-label="5 de 5 estrelas">★★★★★</span>
-          <p class="co-testi__quote">"Já tinha experiência, mas o curso fechou várias lacunas que eu nem sabia que tinha — principalmente em segurança e manutenção. O certificado físico pesou bastante no meu currículo."</p>
-          <div class="co-testi__author">
-            <span class="co-testi__avatar" aria-hidden="true">FR</span>
-            <div>
-              <strong>Felipe Rocha</strong>
-              <span>Supervisor de obras · Salvador/BA</span>
-            </div>
-          </div>
-        </article>
+      <div class="testi-video-grid" data-reveal>
+        <div class="testi-video">
+          <iframe src="https://www.youtube-nocookie.com/embed/-hw8bR7GfJQ?rel=0&modestbranding=1&playsinline=1" title="Depoimento em vídeo de aluno — Operadores de Elite" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testi-video testi-video--wide">
+          <iframe src="https://www.youtube-nocookie.com/embed/LQ69SSLfltA?rel=0&modestbranding=1&playsinline=1" title="Depoimento em vídeo de aluno — Operadores de Elite" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testi-video">
+          <iframe src="https://www.youtube-nocookie.com/embed/2UkSmGx_q94?rel=0&modestbranding=1&playsinline=1" title="Depoimento em vídeo de aluno — Operadores de Elite" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </section>
