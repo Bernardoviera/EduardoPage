@@ -69,25 +69,6 @@
 .co-testi__score-stars { color: var(--gold); font-size: 1.05rem; letter-spacing: 2px; }
 .co-testi__score-desc { margin: 0; color: var(--text-muted-on-dark); font-size: 0.92rem; }
 .co-testi__score-desc strong { color: #fff; }
-.co-testi__grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
-@media (min-width: 720px) { .co-testi__grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1080px) { .co-testi__grid { grid-template-columns: repeat(3, 1fr); } }
-.co-testi__card {
-  display: flex; flex-direction: column; gap: var(--space-3);
-  background: var(--bg-panel-2); border: 1px solid var(--border-dark);
-  border-radius: var(--radius-lg); padding: var(--space-5);
-}
-.co-testi__card-stars { color: var(--gold); font-size: 0.95rem; letter-spacing: 2px; }
-.co-testi__quote { flex: 1; margin: 0; color: var(--text-on-dark); font-size: 0.95rem; line-height: 1.65; font-style: italic; }
-.co-testi__author { display: flex; align-items: center; gap: 0.7rem; margin-top: auto; }
-.co-testi__avatar {
-  flex-shrink: 0; width: 44px; height: 44px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(244,113,28,0.16); color: var(--gold);
-  font-family: var(--font-display); font-weight: 800; font-size: 0.82rem;
-}
-.co-testi__author strong { display: block; color: #fff; font-size: 0.92rem; }
-.co-testi__author span { color: var(--text-muted-on-dark); font-size: 0.8rem; }
 </style>
 </head>
 <body>
@@ -348,63 +329,16 @@
         <p class="co-testi__score-desc"><strong>+120 operadores</strong> já formados no treinamento presencial</p>
       </div>
 
-      <!-- TODO: substituir pelos depoimentos reais dos alunos (nome, foto/avatar, cidade e texto) quando enviados -->
-      <div class="co-testi__grid" data-reveal>
-        <article class="co-testi__card">
-          <span class="co-testi__card-stars" aria-label="5 de 5 estrelas">★★★★★</span>
-          <p class="co-testi__quote">"Cheguei sem nunca ter encostado numa perfuratriz e saí operando com segurança. A prática com equipamento real fez toda a diferença — na obra eu já apliquei tudo no primeiro dia."</p>
-          <div class="co-testi__author">
-            <span class="co-testi__avatar" aria-hidden="true">RM</span>
-            <div>
-              <strong>Ricardo Mendes</strong>
-              <span>Operador de perfuratriz · São Paulo/SP</span>
-            </div>
-          </div>
-        </article>
-        <article class="co-testi__card">
-          <span class="co-testi__card-stars" aria-label="5 de 5 estrelas">★★★★★</span>
-          <p class="co-testi__quote">"Mandei minha equipe inteira fazer o curso. Depois disso caiu muito o número de retrabalho e quase zeramos os acidentes com equipamento na obra. Valeu cada centavo."</p>
-          <div class="co-testi__author">
-            <span class="co-testi__avatar" aria-hidden="true">JF</span>
-            <div>
-              <strong>Juliana Ferreira</strong>
-              <span>Encarregada de obra · Rio de Janeiro/RJ</span>
-            </div>
-          </div>
-        </article>
-        <article class="co-testi__card">
-          <span class="co-testi__card-stars" aria-label="5 de 5 estrelas">★★★★★</span>
-          <p class="co-testi__quote">"O Eduardo ensina do jeito que precisa ser: na prática, sem enrolação. Três meses depois do curso já estava fechando serviços de corte e perfuração por conta própria."</p>
-          <div class="co-testi__author">
-            <span class="co-testi__avatar" aria-hidden="true">MV</span>
-            <div>
-              <strong>Marcos Vinícius</strong>
-              <span>Operador autônomo · Belo Horizonte/MG</span>
-            </div>
-          </div>
-        </article>
-        <article class="co-testi__card">
-          <span class="co-testi__card-stars" aria-label="5 de 5 estrelas">★★★★★</span>
-          <p class="co-testi__quote">"Turma pequena, atenção total do instrutor e equipamento profissional de verdade — não é aquele curso genérico. Voltei pra empresa com muito mais confiança no equipamento."</p>
-          <div class="co-testi__author">
-            <span class="co-testi__avatar" aria-hidden="true">AC</span>
-            <div>
-              <strong>Anderson Costa</strong>
-              <span>Técnico de manutenção · Curitiba/PR</span>
-            </div>
-          </div>
-        </article>
-        <article class="co-testi__card">
-          <span class="co-testi__card-stars" aria-label="5 de 5 estrelas">★★★★★</span>
-          <p class="co-testi__quote">"Já tinha experiência, mas o curso fechou várias lacunas que eu nem sabia que tinha — principalmente em segurança e manutenção. O certificado físico pesou bastante no meu currículo."</p>
-          <div class="co-testi__author">
-            <span class="co-testi__avatar" aria-hidden="true">FR</span>
-            <div>
-              <strong>Felipe Rocha</strong>
-              <span>Supervisor de obras · Salvador/BA</span>
-            </div>
-          </div>
-        </article>
+      <div class="testi-video-grid" data-reveal>
+        <div class="testi-video">
+          <iframe src="https://www.youtube-nocookie.com/embed/-hw8bR7GfJQ?rel=0&modestbranding=1&playsinline=1" title="Depoimento em vídeo de aluno — Operadores de Elite" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testi-video testi-video--wide">
+          <iframe src="https://www.youtube-nocookie.com/embed/LQ69SSLfltA?rel=0&modestbranding=1&playsinline=1" title="Depoimento em vídeo de aluno — Operadores de Elite" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="testi-video">
+          <iframe src="https://www.youtube-nocookie.com/embed/2UkSmGx_q94?rel=0&modestbranding=1&playsinline=1" title="Depoimento em vídeo de aluno — Operadores de Elite" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </section>

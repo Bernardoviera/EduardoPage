@@ -432,20 +432,14 @@
 .oe-bonus2__cta { margin-top: var(--space-6); flex-direction: column; gap: 0.15rem; line-height: 1.3; }
 .oe-bonus2__cta small { font-weight: 500; font-size: 0.75rem; color: #E8FFF1; text-transform: none; }
 
-/* Quote-style testimonials */
-.oe-quote-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
-@media (min-width: 760px) { .oe-quote-grid { grid-template-columns: repeat(3, 1fr); } }
-.oe-quote {
-  background: var(--surface-card); border: 1px solid var(--border-light); border-radius: var(--radius-lg);
-  padding: var(--space-4); box-shadow: var(--shadow-sm);
+/* Video testimonials (real depoimentos em vídeo) */
+.testi-video-grid { display: grid; gap: var(--space-4); grid-template-columns: 1fr; }
+@media (min-width: 760px) { .testi-video-grid { grid-template-columns: repeat(3, 1fr); } }
+.testi-video {
+  position: relative; width: 100%; aspect-ratio: 9 / 16;
+  border-radius: var(--radius-lg); overflow: hidden; background: #000;
+  box-shadow: var(--shadow-lg); border: 1px solid var(--border-dark);
 }
-.oe-quote__head { display: flex; align-items: center; gap: 0.7rem; margin-bottom: var(--space-3); }
-.oe-quote__avatar {
-  flex-shrink: 0; width: 46px; height: 46px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  background: rgba(23,162,74,0.14); color: var(--primary);
-  font-family: var(--font-display); font-weight: 800; font-size: 0.9rem;
-}
-.oe-quote__head strong { display: block; color: var(--text-on-light); font-size: 0.95rem; }
-.oe-quote__stars { color: var(--gold); display: inline-flex; gap: 1px; margin-top: 0.15rem; }
-.oe-quote p { color: var(--text-muted-on-light); font-size: 0.92rem; font-style: italic; }
+.testi-video--wide { aspect-ratio: 16 / 9; }
+@media (min-width: 760px) { .testi-video--wide { align-self: center; } }
+.testi-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
