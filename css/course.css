@@ -443,3 +443,177 @@
 .testi-video--wide { aspect-ratio: 16 / 9; }
 @media (min-width: 760px) { .testi-video--wide { align-self: center; } }
 .testi-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+/* ==========================================================================
+   Operadores de Elite (virtual) — v3 (ajustes do mockup do Eduardo)
+   ========================================================================== */
+
+/* Header: two logos centred */
+.oe-header .container { justify-content: center; padding-block: 0.6rem; }
+.oe-header__logos { display: flex; align-items: center; gap: var(--space-4); text-decoration: none; }
+.oe-header__logo { height: 58px; width: auto; }
+.oe-header__sep { width: 1px; height: 40px; background: rgba(255, 255, 255, 0.35); }
+.oe-header__qi { display: flex; align-items: flex-end; gap: 0.3rem; line-height: 1; }
+.oe-header__qi-mark {
+  font-family: var(--font-display); font-weight: 800; font-size: 2.1rem;
+  color: #E11D2A; letter-spacing: -0.02em;
+}
+.oe-header__qi-word {
+  font-weight: 700; font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase;
+  color: #fff; padding-bottom: 0.25rem;
+}
+@media (max-width: 480px) {
+  .oe-header__logo { height: 46px; }
+  .oe-header__qi-mark { font-size: 1.75rem; }
+}
+
+/* Hero: single centred column */
+.oe-hero__stack { display: grid; gap: var(--space-5); max-width: 860px; text-align: center; }
+.oe-hero h1 { font-size: clamp(2.2rem, 7vw, 4.6rem); line-height: 1.02; }
+.oe-hero__pre { display: block; font-size: 0.72em; }
+.oe-hero .co-lede { margin-inline: auto; }
+.oe-hero__vlabel {
+  display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.6rem;
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-muted-on-dark);
+}
+.oe-hero__vlabel svg { color: var(--gold); }
+.oe-hero .video-card--wide { aspect-ratio: 16 / 9; width: 100%; }
+.oe-hero .oe-cta2 { margin-top: var(--space-4); }
+
+/* Big two-line CTA with chevrons (hero + price) */
+.oe-cta2 { justify-content: space-between; gap: var(--space-3); border-radius: var(--radius-md); text-align: center; }
+.oe-cta2 > svg { flex-shrink: 0; }
+.oe-cta2__text {
+  flex: 1; display: flex; flex-direction: column; gap: 0.15rem;
+  font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  font-size: clamp(1.1rem, 2.6vw, 1.5rem); line-height: 1.15;
+}
+.oe-cta2__text small { font-family: var(--font-body); font-weight: 700; font-size: 0.62em; color: #E8FFF1; }
+
+/* Results: copy + chart (left) / operator photo (right) */
+.oe-results { background: var(--surface-card); overflow: hidden; }
+.oe-results__grid { display: grid; gap: var(--space-5); align-items: center; }
+@media (min-width: 940px) { .oe-results__grid { grid-template-columns: 1.15fr 0.85fr; } }
+.oe-results h2 { font-size: clamp(2rem, 5vw, 3.2rem); line-height: 1.02; margin-top: 0.4rem; }
+.oe-results__lede { margin-top: var(--space-3); color: var(--text-muted-on-light); font-size: 1.05rem; max-width: 36rem; }
+
+.oe-chart {
+  position: relative; margin: var(--space-5) 0 0;
+  background: linear-gradient(160deg, var(--bg-panel-2), var(--bg-deep));
+  border-radius: var(--radius-lg); padding: var(--space-4) var(--space-4) var(--space-3);
+  box-shadow: var(--shadow-lg); color: #fff;
+}
+.oe-chart__title {
+  font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-muted-on-dark); max-width: 12rem;
+}
+.oe-chart__trend {
+  position: absolute; top: var(--space-4); right: var(--space-4);
+  width: 62%; height: 70px; overflow: visible;
+}
+.oe-chart__trend path, .oe-chart__trend polyline {
+  fill: none; stroke: #3B9EFF; stroke-width: 2; vector-effect: non-scaling-stroke;
+}
+.oe-chart__bars {
+  display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.6rem;
+  align-items: end; height: 260px; margin-top: var(--space-4);
+}
+.oe-bar { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; min-width: 0; }
+.oe-bar__value { font-family: var(--font-display); font-weight: 800; font-size: clamp(0.95rem, 2.4vw, 1.5rem); margin-bottom: 0.3rem; }
+.oe-bar__col {
+  width: 100%; height: calc((100% - 5.2rem) * var(--h, 1));
+  min-height: 36px; border-radius: 6px 6px 2px 2px;
+  display: flex; align-items: flex-end; justify-content: center; padding-bottom: 0.45rem;
+}
+.oe-bar--down .oe-bar__col { background: linear-gradient(180deg, var(--gold), #C2410C); }
+.oe-bar--up .oe-bar__col { background: linear-gradient(180deg, #3B9EFF, #1D4ED8); }
+.oe-bar__label {
+  margin-top: 0.45rem; height: 2.4rem; text-align: center;
+  font-size: 0.66rem; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase;
+  color: var(--text-muted-on-dark); line-height: 1.2;
+}
+
+.oe-results__photo { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); }
+.oe-results__photo img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.oe-results__quote {
+  position: absolute; top: var(--space-4); right: var(--space-4);
+  font-family: Georgia, "Times New Roman", serif; font-style: italic; font-weight: 700;
+  font-size: 1.2rem; line-height: 1.15; text-align: right; color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+.oe-results__tags {
+  position: absolute; right: 0; bottom: var(--space-4);
+  background: var(--gold); padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+  display: grid; gap: 0.25rem;
+}
+.oe-results__tags li { color: #fff; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+
+/* Offer box ("Oferta explosiva!") with its own CTA */
+.oe-offer {
+  display: block; padding: 0; overflow: hidden;
+  border: 2px solid var(--bg-panel); background: var(--surface-card);
+}
+.oe-offer__body { display: flex; gap: var(--space-3); align-items: center; padding: var(--space-4); }
+.oe-offer .oe-offer__badge {
+  flex-shrink: 0; font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+  font-size: 1.15rem; line-height: 1.05; color: var(--gold);
+  padding-right: var(--space-3); border-right: 1px solid var(--border-light);
+}
+.oe-offer__icon {
+  flex-shrink: 0; width: 56px; height: 56px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(244, 113, 28, 0.14); color: var(--gold);
+}
+.oe-offer h3 { text-transform: uppercase; }
+.oe-offer .oe-offer__lead { color: var(--text-on-light) ; font-weight: 600; }
+.oe-offer__cta {
+  display: flex; width: 100%; border-radius: 0; min-height: 56px;
+  background: linear-gradient(90deg, var(--gold-deep), var(--gold)); color: #fff;
+  font-family: var(--font-display); font-weight: 800; text-transform: uppercase; letter-spacing: 0.02em;
+}
+.oe-offer__cta:hover { filter: brightness(1.08); }
+@media (max-width: 560px) {
+  .oe-offer__body { flex-wrap: wrap; justify-content: center; text-align: center; }
+  .oe-offer .oe-offer__badge { border-right: 0; padding-right: 0; width: 100%; }
+  .oe-offer__icon { display: none; }
+  .oe-offer__cta { font-size: 0.95rem; }
+}
+
+/* Curriculum: icon badge over the bottom edge of each image */
+.oe-curriculum__item { position: relative; }
+.oe-curriculum__imgwrap { overflow: visible; }
+.oe-curriculum__imgwrap img { border-radius: var(--radius-lg); }
+.oe-curriculum__icon {
+  position: absolute; left: 50%; bottom: -20px; transform: translateX(-50%);
+  width: 42px; height: 42px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--gold); color: #fff; border: 3px solid var(--bg-panel);
+}
+.oe-curriculum__item .oe-curriculum__tag { margin-top: calc(var(--space-3) + 20px); }
+
+/* Price strip: installments | cash */
+.oe-bonus2__price-box {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: var(--space-3) var(--space-5);
+  background: var(--bg-deep); border: 1px solid var(--border-dark);
+  border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5);
+}
+.oe-bonus2__from strong { color: var(--gold); text-transform: uppercase; }
+.oe-bonus2__value { font-size: clamp(1.6rem, 5vw, 3rem); }
+.oe-bonus2__cash {
+  color: var(--text-muted-on-dark); text-transform: uppercase; font-weight: 600; font-size: 0.95rem; line-height: 1.35;
+}
+.oe-bonus2__cash strong { color: #fff; font-size: 1.1rem; }
+@media (min-width: 640px) {
+  .oe-bonus2__cash { padding-left: var(--space-5); border-left: 1px solid rgba(255, 255, 255, 0.25); text-align: left; }
+}
+.oe-bonus2__cta { flex-direction: row; }
+.oe-bonus2__cta-hand { flex-shrink: 0; }
+@media (max-width: 560px) { .oe-bonus2__cta-hand { display: none; } }
+@media (max-width: 560px) {
+  .oe-chart { padding: var(--space-3) 0.75rem; }
+  .oe-chart__bars { gap: 0.3rem; height: 240px; }
+  .oe-bar__label { font-size: 0.52rem; letter-spacing: 0; height: 2.6rem; hyphens: auto; overflow-wrap: anywhere; }
+}
