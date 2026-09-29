@@ -617,3 +617,18 @@
   .oe-chart__bars { gap: 0.3rem; height: 240px; }
   .oe-bar__label { font-size: 0.52rem; letter-spacing: 0; height: 2.6rem; hyphens: auto; overflow-wrap: anywhere; }
 }
+
+/* Price strip v2: "por apenas R$ 997,00 | pague em até 12x no cartão" (sem valor de parcela) */
+.oe-bonus2__price-box .oe-bonus2__from { text-transform: uppercase; font-weight: 700; line-height: 1.25; text-align: right; }
+.oe-bonus2__price-box .oe-bonus2__value { margin-top: 0; font-size: clamp(2.2rem, 7vw, 3.6rem); }
+.oe-bonus2__pay { display: flex; align-items: center; gap: 0.75rem; text-align: left; }
+.oe-bonus2__pay svg { color: #fff; flex-shrink: 0; }
+.oe-bonus2__pay p { text-transform: uppercase; font-weight: 700; font-size: 0.85rem; line-height: 1.25; color: var(--text-muted-on-dark); }
+.oe-bonus2__pay strong { display: block; font-family: var(--font-display); font-weight: 800; font-size: clamp(1.3rem, 3.4vw, 1.9rem); color: var(--gold); }
+.oe-bonus2__pay span { display: block; color: var(--text-muted-on-dark); font-size: 0.78rem; }
+@media (min-width: 640px) {
+  .oe-bonus2__pay { padding-left: var(--space-5); border-left: 1px solid rgba(255, 255, 255, 0.25); }
+}
+@media (max-width: 639px) {
+  .oe-bonus2__price-box .oe-bonus2__from { text-align: center; }
+}
