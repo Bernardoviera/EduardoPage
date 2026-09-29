@@ -632,3 +632,7 @@
 @media (max-width: 639px) {
   .oe-bonus2__price-box .oe-bonus2__from { text-align: center; }
 }
+/* Igual ao print do Eduardo: preço em branco, CTA centralizado com subtítulo em caixa alta */
+.oe-bonus2__price-box .oe-bonus2__value strong { color: #fff; }
+.oe-bonus2__cta .oe-cta2__text { align-items: center; text-align: center; }
+.oe-bonus2__cta .oe-cta2__text small { text-transform: uppercase; }
