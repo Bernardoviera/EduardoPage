@@ -21,7 +21,7 @@
    fully visible without scrolling as soon as the page opens */
 @media (max-width: 899px) {
   .oe-hero { padding-top: var(--space-5); }
-  .oe-hero__video { order: -1; }
+  /* título antes do vídeo, como no mockup */
   .oe-hero .co-hero__copy { margin-top: var(--space-4); text-align: center; }
   .oe-hero h1 { font-size: clamp(1.5rem, 6vw, 2rem); }
   .oe-hero .co-lede { margin-top: 0.5rem; font-size: 0.95rem; }
@@ -636,3 +636,18 @@
 .oe-bonus2__price-box .oe-bonus2__value strong { color: #fff; }
 .oe-bonus2__cta .oe-cta2__text { align-items: center; text-align: center; }
 .oe-bonus2__cta .oe-cta2__text small { text-transform: uppercase; }
+
+/* Resultados: imagem do Eduardo inteira (>=760px); texto + gráfico + recorte do operador no celular */
+.oe-results__full img { display: block; width: 100%; height: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+.oe-results__photo img { aspect-ratio: 552 / 941; object-fit: cover; }
+@media (min-width: 760px) {
+  .oe-results__grid { display: none; }
+}
+@media (max-width: 759px) {
+  .oe-results__full { display: none; }
+  .oe-results__photo { max-width: 360px; margin-inline: auto; }
+}
+
+/* "O que você recebe" sem os vídeos: lista à esquerda, oferta à direita */
+.oe-receive__grid { align-items: center; }
+.oe-receive__grid > .oe-offer { margin-top: 0; }
