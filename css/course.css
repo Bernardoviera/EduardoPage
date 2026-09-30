@@ -651,3 +651,9 @@
 /* "O que você recebe" sem os vídeos: lista à esquerda, oferta à direita */
 .oe-receive__grid { align-items: center; }
 .oe-receive__grid > .oe-offer { margin-top: 0; }
+
+/* Imagem de resultados de ponta a ponta (sem margem, sem cantos) */
+.oe-results__full img { border-radius: 0; box-shadow: none; }
+@media (min-width: 760px) {
+  .oe-results { padding-block: 0; background: #fff; }
+}
