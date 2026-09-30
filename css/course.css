@@ -657,3 +657,68 @@
 @media (min-width: 760px) {
   .oe-results { padding-block: 0; background: #fff; }
 }
+
+/* ==== v4: logos maiores, oferta chamativa (mockup), só o card do YouTube ==== */
+.oe-header__logo { height: 76px; margin-block: -6px; }
+.oe-header__sep { height: 52px; }
+.oe-header__qi-mark { font-size: 2.7rem; }
+.oe-header__qi-word { font-size: 0.74rem; }
+@media (max-width: 480px) {
+  .oe-header__logo { height: 58px; }
+  .oe-header__qi-mark { font-size: 2.1rem; }
+  .oe-header__qi-word { font-size: 0.62rem; }
+}
+
+/* "O que você recebe": lista em 2 colunas + oferta em largura total */
+.oe-receive__grid { grid-template-columns: 1fr !important; gap: var(--space-5); }
+@media (min-width: 760px) {
+  .oe-receive__list { grid-template-columns: 1fr 1fr; gap: 0.8rem var(--space-6); }
+}
+
+.oe-offer {
+  border: 0; border-radius: var(--radius-lg);
+  background: linear-gradient(160deg, var(--bg-panel-2), var(--bg-deep));
+  padding: var(--space-3); box-shadow: var(--shadow-lg);
+}
+.oe-offer__body { gap: var(--space-4); padding: var(--space-3) var(--space-3) var(--space-4); }
+.oe-offer__burst { position: relative; flex-shrink: 0; width: 190px; aspect-ratio: 1; display: grid; place-items: center; }
+.oe-offer__burst svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.oe-offer__burst polygon { fill: rgba(244, 113, 28, 0.08); stroke: var(--gold); stroke-width: 2.2; stroke-linejoin: round; }
+.oe-offer .oe-offer__badge {
+  position: relative; border: 0; padding: 0; text-align: center;
+  font-size: 1.75rem; line-height: 1; color: var(--gold);
+  text-shadow: 0 2px 12px rgba(244, 113, 28, 0.35);
+}
+.oe-offer__card {
+  flex: 1; display: flex; align-items: center; gap: var(--space-4);
+  background: #fff; border-radius: var(--radius-md); padding: var(--space-4) var(--space-5);
+}
+.oe-offer__icon { width: 72px; height: 72px; border-radius: 18px; }
+.oe-offer h3 { font-size: clamp(1.3rem, 2.6vw, 1.9rem); line-height: 1.1; }
+.oe-offer .oe-offer__lead { font-size: 1.1rem; margin-top: 0.35rem; }
+.oe-offer p { font-size: 0.95rem; }
+.oe-offer__cta {
+  border-radius: var(--radius-md); min-height: 64px;
+  font-size: clamp(1.05rem, 2.4vw, 1.45rem); box-shadow: var(--shadow-gold);
+}
+@media (max-width: 760px) {
+  .oe-offer__body { flex-direction: column; text-align: center; }
+  .oe-offer__burst { width: 150px; }
+  .oe-offer .oe-offer__badge { font-size: 1.35rem; width: auto; }
+  .oe-offer__card { flex-direction: column; text-align: center; padding: var(--space-4); }
+  .oe-offer__icon { display: flex; width: 56px; height: 56px; }
+}
+
+/* Canal do YouTube sozinho, centralizado */
+.oe-yt { grid-template-columns: 1fr !important; max-width: 860px; }
+.oe-yt .co-bonus__card--compact { align-items: flex-start; }
+.oe-offer__burst { width: 210px; }
+.oe-offer .oe-offer__badge { font-size: 1.4rem; }
+@media (max-width: 760px) {
+  .oe-offer__burst { width: 170px; }
+  .oe-offer .oe-offer__badge { font-size: 1.12rem; }
+}
+.oe-header__logo { height: 104px; margin-block: -20px; }
+@media (max-width: 480px) { .oe-header__logo { height: 78px; margin-block: -14px; } }
+.oe-yt .authority-badges li { color: var(--text-on-dark); background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.18); }
+.oe-offer__cta { text-align: center; }
