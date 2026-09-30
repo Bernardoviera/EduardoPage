@@ -43,6 +43,49 @@
  .sb-offer__button { padding:18px 16px; }
 }
 </style>
+<!-- Meta Pixel (1598118151663194) -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1598118151663194');
+fbq('track', 'PageView');
+
+/* Eventos da página de vendas do SmartBook */
+(function () {
+  var product = {
+    content_name: 'SmartBook Operadores de Elite',
+    content_ids: ['K107249628F'],
+    content_type: 'product',
+    value: 197.00,
+    currency: 'BRL'
+  };
+
+  // Visualizou a oferta
+  fbq('track', 'ViewContent', product);
+
+  document.addEventListener('click', function (ev) {
+    var link = ev.target.closest && ev.target.closest('a[href]');
+    if (!link) return;
+    var href = link.getAttribute('href') || '';
+
+    if (href.indexOf('pay.hotmart.com') !== -1) {
+      // Foi para o checkout da Hotmart
+      fbq('track', 'InitiateCheckout', Object.assign({ num_items: 1 }, product));
+    } else if (href === '#preco') {
+      // Clicou num botão de compra da página (leva até a oferta)
+      fbq('track', 'AddToCart', product);
+    } else if (href.indexOf('wa.me') !== -1) {
+      // Chamou no WhatsApp
+      fbq('track', 'Contact', { content_name: product.content_name });
+    }
+  }, true);
+})();
+</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=1598118151663194&ev=PageView&noscript=1"></noscript>
+<!-- End Meta Pixel -->
 </head>
 <body>
 
