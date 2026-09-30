@@ -737,3 +737,4 @@
   .oe-header__qi-em { font-size: 0.75rem; }
   .oe-header__qi-word { font-size: 0.52rem; }
 }
+.oe-header__qi-i { color: var(--primary-light); }
