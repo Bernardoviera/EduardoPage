@@ -541,3 +541,27 @@
 @media (min-width: 800px) {
   .sb-why-grid .authority-card--compact { grid-template-columns: 200px 1fr; }
 }
+
+/* ---- Vídeo de apresentação no topo + vantagens ---- */
+.sb-vhero {
+  background: radial-gradient(ellipse at top, #19364b 0%, var(--bg-deep) 70%);
+  color: var(--text-on-dark);
+  padding: clamp(32px, 6vw, 72px) 0;
+}
+.sb-vhero__head { text-align: center; max-width: 820px; margin: 0 auto var(--space-5); }
+.sb-vhero__head h1 { color: #fff; font-size: clamp(1.6rem, 4.2vw, 2.6rem); line-height: 1.15; }
+.sb-vhero__head .section-kicker { color: var(--gold); }
+.sb-vhero__sub { margin-top: var(--space-3); color: var(--text-muted-on-dark); font-size: clamp(1rem, 2vw, 1.15rem); }
+.sb-vhero__video { max-width: 880px; margin: 0 auto; }
+.sb-vhero__video .video-card { display: block; width: 100%; aspect-ratio: 16 / 9; height: auto; box-shadow: 0 20px 60px #0007; }
+
+.sb-adv { background: var(--surface-light); }
+.sb-adv__grid { list-style: none; padding: 0; margin: var(--space-5) 0 0; display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.sb-adv__grid li { display: flex; flex-direction: column; gap: 0.4rem; padding: var(--space-5); background: var(--surface-card); border-radius: 16px; border-top: 4px solid var(--gold); box-shadow: 0 6px 20px rgba(11, 24, 48, 0.06); }
+.sb-adv__grid strong { font-size: 1.1rem; }
+.sb-adv__grid li > span:last-child { color: var(--text-muted-on-light); line-height: 1.5; }
+.sb-adv__i { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 12px; background: rgba(244, 113, 28, 0.12); color: var(--gold-deep); margin-bottom: 0.3rem; }
+
+/* Barra fixa de preço (mobile): escondida até passar pelas vantagens */
+.mobile-cta.sb-cta-late { transform: translateY(110%); transition: transform 0.3s ease; }
+.mobile-cta.sb-cta-late.is-shown { transform: none; }
