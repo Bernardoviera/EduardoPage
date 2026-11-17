@@ -140,38 +140,40 @@ fbq('track', 'PageView');
 <main id="main">
 
   <!-- ========================================================================
-       Hero
+       Video de apresentação (primeira dobra) — gera valor antes do preço
        ======================================================================== -->
-  <section class="sb-hero">
-    <img class="sb-hero__img" src="../assets/img/smartbook-hero.png" alt="SmartBook — Perfurações e Cortes em Concreto. O guia definitivo para operadores que querem executar com segurança e precisão. Conteúdo criado por Eduardo Santos.">
+  <section class="sb-vhero" aria-labelledby="video-heading">
+    <div class="container">
+      <div class="section-head section-head--dark sb-vhero__head">
+        <span class="section-kicker">SmartBook · Perfurações e Cortes em Concreto</span>
+        <h1 id="video-heading">Veja como este e-book vai transformar sua forma de trabalhar!</h1>
+        <p class="sb-vhero__sub">Dê o play e conheça o guia definitivo para operadores que querem executar com segurança e precisão.</p>
+      </div>
+      <div class="sb-vhero__video">
+        <iframe class="video-card"
+                src="https://www.youtube-nocookie.com/embed/Co3U6aF3UP8?rel=0&modestbranding=1&playsinline=1"
+                title="Vídeo de apresentação do SmartBook"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+      </div>
+    </div>
   </section>
 
   <!-- ========================================================================
-       Video + transformation
+       Vantagens (logo abaixo do vídeo)
        ======================================================================== -->
-  <section class="sm-video" aria-labelledby="video-heading">
-    <div class="container sm-video__grid">
-      <iframe class="video-card video-card--wide"
-              src="https://www.youtube-nocookie.com/embed/Co3U6aF3UP8?rel=0&modestbranding=1&playsinline=1"
-              title="Vídeo de apresentação do SmartBook"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen loading="lazy"></iframe>
-      <div class="sm-video__copy">
-        <div class="section-head sb-colhead">
-          <span class="section-kicker">Transforme sua forma de trabalhar</span>
-          <h2 id="video-heading">Veja como este e-book vai transformar sua forma de trabalhar!</h2>
-        </div>
-        <ul class="sm-video__list">
-          <li><svg width="20" height="20"><use href="#icon-check"/></svg> Técnicas que realmente funcionam na prática</li>
-          <li><svg width="20" height="20"><use href="#icon-check"/></svg> Mais segurança, menos erros e retrabalhos</li>
-          <li><svg width="20" height="20"><use href="#icon-check"/></svg> Mais produtividade e melhores resultados nas obras</li>
-          <li><svg width="20" height="20"><use href="#icon-check"/></svg> Mais conhecimento, mais confiança e mais lucros</li>
-        </ul>
-        <a class="btn btn-primary btn-lg" href="#preco">
-          Quero meu SmartBook agora
-          <svg width="18" height="18" aria-hidden="true"><use href="#icon-arrow"/></svg>
-        </a>
+  <section class="sb-adv" aria-labelledby="adv-heading">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-kicker">Vantagens do SmartBook</span>
+        <h2 id="adv-heading">O que você ganha ao aplicar o SmartBook</h2>
       </div>
+      <ul class="sb-adv__grid">
+        <li><span class="sb-adv__i"><svg width="24" height="24"><use href="#icon-tool"/></svg></span><strong>Técnicas que funcionam</strong><span>Métodos testados e aplicados na prática, em centenas de obras.</span></li>
+        <li><span class="sb-adv__i"><svg width="24" height="24"><use href="#icon-shield"/></svg></span><strong>Mais segurança</strong><span>Menos erros, menos retrabalho e menos risco para você e sua equipe.</span></li>
+        <li><span class="sb-adv__i"><svg width="24" height="24"><use href="#icon-settings"/></svg></span><strong>Mais produtividade</strong><span>Execute mais rápido e entregue melhores resultados nas obras.</span></li>
+        <li><span class="sb-adv__i"><svg width="24" height="24"><use href="#icon-dollar"/></svg></span><strong>Mais lucro</strong><span>Mais conhecimento e confiança para cobrar melhor pelos seus serviços.</span></li>
+      </ul>
     </div>
   </section>
 
@@ -193,6 +195,13 @@ fbq('track', 'PageView');
         <li><span class="sb-badge__i"><svg width="22" height="22"><use href="#icon-check"/></svg></span> Aplicação imediata</li>
       </ul>
     </div>
+  </section>
+
+  <!-- ========================================================================
+       Hero
+       ======================================================================== -->
+  <section class="sb-hero">
+    <img class="sb-hero__img" src="../assets/img/smartbook-hero.png" alt="SmartBook — Perfurações e Cortes em Concreto. O guia definitivo para operadores que querem executar com segurança e precisão. Conteúdo criado por Eduardo Santos.">
   </section>
 
   <!-- ========================================================================
@@ -302,7 +311,7 @@ fbq('track', 'PageView');
           <svg width="22" height="22" aria-hidden="true"><use href="#icon-arrow"/></svg>
         </a>
         <p class="sb-offer__note">Compra pela Hotmart · Acesso imediato após a aprovação do pagamento</p>
-        <a class="sb-offer__help" href="https://wa.me/5511982553304?text=Ol%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20o%20SmartBook" target="_blank" rel="noopener">Tem alguma dúvida? Fale com nossa equipe.</a>
+        <a class="sb-offer__help" href="https://wa.me/551140630456?text=Ol%C3%A1%21%20Estou%20interessado%28a%29%20no%20SmartBook%2C%20tenho%20d%C3%BAvidas%21" target="_blank" rel="noopener">Tem alguma dúvida? Fale com nossa equipe.</a>
       </div>
     </div>
   </section>
@@ -334,12 +343,12 @@ fbq('track', 'PageView');
 </footer>
 
 <!-- Floating WhatsApp -->
-<a class="whatsapp-fab" href="https://wa.me/5511982553304?text=Ol%C3%A1%2C%20tenho%20interesse%20no%20SmartBook" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+<a class="whatsapp-fab" href="https://wa.me/551140630456?text=Ol%C3%A1%21%20Estou%20interessado%28a%29%20no%20SmartBook%2C%20tenho%20d%C3%BAvidas%21" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
   <svg width="28" height="28"><use href="#icon-whatsapp"/></svg>
 </a>
 
 <!-- Mobile sticky CTA -->
-<div class="mobile-cta">
+<div class="mobile-cta sb-cta-late">
   <div class="mobile-cta__price">
     <span>Oferta SmartBook</span>
     <strong>R$ 197,00</strong>
@@ -348,6 +357,20 @@ fbq('track', 'PageView');
 </div>
 
 <script src="../js/script.js"></script>
+<script>
+/* Barra de preço no celular só aparece depois das vantagens (valor antes do preço). */
+(function () {
+  var bar = document.querySelector('.sb-cta-late');
+  var adv = document.querySelector('.sb-adv');
+  if (!bar || !adv) return;
+  function check() {
+    bar.classList.toggle('is-shown', adv.getBoundingClientRect().bottom < window.innerHeight * 0.5);
+  }
+  window.addEventListener('scroll', check, { passive: true });
+  window.addEventListener('resize', check);
+  check();
+})();
+</script>
 </body>
 </html>
 
